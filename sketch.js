@@ -11,8 +11,8 @@ var linec3 = random(0,255);
 var linew = random(2, 13);
 
 function setup() {
-createCanvas(1920, 1080)
-background(0);
+	canvas = createCanvas(window.innerWidth, window.innerHeight);
+	background(0);
 }
 
 function draw() {
