@@ -28,7 +28,7 @@ function draw() {
 	linec3 = random(0,255);
 	linew = random(2, 13);
 	stroke(linec1, linec2, linec3);
-	strokeWidth(linew)
+	strokeWeight(linew)
 	fill(c1, c2, c3);
 	ellipse(x, y ,w ,h);
 }
