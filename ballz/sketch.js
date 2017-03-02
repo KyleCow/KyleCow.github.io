@@ -1,19 +1,20 @@
-var canvas
-var x = random(width);
-var y = random(height);
-var w = random(2,42);
-var h = random(2, 42);
-var c1 = random(0,255);
-var c2 = random(0,255);
-var c3 = random(0,255);
-var linec1 = random(0,255);
-var linec2 = random(0,255);
-var linec3 = random(0,255);
-var linew = random(2, 13);
 
 function setup() {
-canvas = createCanvas(window.innerWidth, window.innerHeight);
-background(0);
+	canvas = createCanvas(window.innerWidth, window.innerHeight);
+	background(0);
+	var canvas
+	var x = random(width);
+	var y = random(height);
+	var w = random(2,42);
+	var h = random(2, 42);
+	var c1 = random(0,255);
+	var c2 = random(0,255);
+	var c3 = random(0,255);
+	var linec1 = random(0,255);
+	var linec2 = random(0,255);
+	var linec3 = random(0,255);
+	var linew = random(2, 13);
+
 }
 
 function draw() {
