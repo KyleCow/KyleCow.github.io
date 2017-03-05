@@ -2,7 +2,7 @@ var playerX = 25;
 var playerY = 25;
 var playerR = 50;
 var blockX = 300;
-var blockY = 300;
+var blockY = 450;
 var blockR = 1;
 var goalX = 300;
 var goalY = 450;
@@ -63,6 +63,7 @@ function draw() {
 		if(lives <= 0){
 			clear();
 			text("lol u lose", 300, 300);
+			text("you got", 305, 350);
+			text(score, 345, 400);
 		}
 }
-
