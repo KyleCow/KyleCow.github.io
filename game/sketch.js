@@ -7,9 +7,6 @@ var blockR = 1;
 var goalX = 300;
 var goalY = 450;
 var goalR = 55;
-var r = 20;
-var g = 20;
-var b = 200;
 var lives = 3;
 var score = 0;
 
@@ -32,10 +29,11 @@ function draw() {
 		textSize(32);
 		text("lives: "+ lives, 500, 45);
 		text("score: " + score, 300, 45);
-		fill(51)
-		fill(r, g, b);
+		fill(20, 20, 200);
 		noStroke();
 		ellipse(playerX, playerY, playerR, playerR);
+		stroke(0);
+		noFill();
 		ellipse(blockX, blockY, blockR, blockR);
 		fill(0, 50, 50);
 		ellipse(goalX, goalY, goalR, goalR);
@@ -61,3 +59,4 @@ function draw() {
 			text("lol u lose", 300, 300);
 		}
 }
+
