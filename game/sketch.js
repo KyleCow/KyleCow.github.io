@@ -55,6 +55,8 @@ function draw() {
 			blockR = 1;
 			goalX = random(100, 500);
 			goalY = random(100, 500);
+			blockX = random(100, 500);
+			blockY = random(100, 500);
 		}
 		blockR = blockR + score;
 		console.log(blockR);
@@ -63,5 +65,4 @@ function draw() {
 			text("lol u lose", 300, 300);
 		}
 }
-
 
