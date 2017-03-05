@@ -26,6 +26,8 @@ function draw() {
 	    } else if (key == 'D') {
 	        playerX = playerX + 5;
 	    }
+		stroke(0);
+		fill(255, 0, 0);
 		textSize(32);
 		text("lives: "+ lives, 500, 45);
 		text("score: " + score, 300, 45);
@@ -34,7 +36,9 @@ function draw() {
 		ellipse(playerX, playerY, playerR, playerR);
 		stroke(0);
 		noFill();
+		strokeWeight(5);
 		ellipse(blockX, blockY, blockR, blockR);
+		noStroke();
 		fill(0, 50, 50);
 		ellipse(goalX, goalY, goalR, goalR);
 		if (sqrt(sq(playerX - blockX) + sq(playerY - blockY)) < playerR/2 + blockR/2){
@@ -59,4 +63,5 @@ function draw() {
 			text("lol u lose", 300, 300);
 		}
 }
+
 
