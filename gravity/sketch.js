@@ -18,6 +18,11 @@ function draw(){
 		ballY = ballY + grav;
 		grav = grav + 1;
 	}
-	console.log(grav);
-	console.log(key);
+	textSize(20);
+	noFill();
+	stroke(255);
+	strokeWeight(1);
+	text("Press[W] To Start Going Up", 600, 20);
+	text("Press Anything Else To Stop", 600, 60);
+	text("Going Up", 650, 80);
 }
