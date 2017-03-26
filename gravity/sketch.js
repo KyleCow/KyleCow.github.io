@@ -25,4 +25,5 @@ function draw(){
 	text("Press[W] To Start Going Up", 600, 20);
 	text("Press Anything Else To Stop", 600, 60);
 	text("Going Up", 650, 80);
+	console.log(ballY);
 }
