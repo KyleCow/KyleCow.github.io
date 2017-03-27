@@ -1,7 +1,7 @@
-var x = random(width);;
+var x = random(width);
 var y = random(height);
-var w = random(2,42)
-var h = random(2, 42)
+var w = random(2,42);
+var h = random(2, 42);
 var c1 = random(0,255);
 var c2 = random(0,255);
 var c3 = random(0,255);
