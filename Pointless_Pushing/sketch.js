@@ -81,7 +81,7 @@ function draw(){
 		if (key == 'W') {
 			dotY = dotY - 5;
 		} else if (key == 'A') {
-			dotX = dotyX - 5;
+			dotX = dotX - 5;
 		} else if (key == 'S') {
 			dotY = dotY + 5;
 		} else if (key == 'D') {
@@ -92,7 +92,7 @@ function draw(){
 		if (key == 'W') {
 			dotY = dotY - 5;
 		} else if (key == 'A') {
-			dotX = dotyX - 5;
+			dotX = dotX - 5;
 		} else if (key == 'S') {
 			dotY = dotY + 5;
 		} else if (key == 'D') {
@@ -103,7 +103,7 @@ function draw(){
 		if (key == 'W') {
 			dotY = dotY - 5;
 		} else if (key == 'A') {
-			dotX = dotyX - 5;
+			dotX = dotX - 5;
 		} else if (key == 'S') {
 			dotY = dotY + 5;
 		} else if (key == 'D') {
