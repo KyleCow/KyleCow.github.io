@@ -131,10 +131,7 @@
                 sd1 = document.getElementById('sd1').value;
                 sd2 = document.getElementById('sd2').value;
                 hyp = document.getElementById('hyp').value;
-                if(hyp < sd1 || hyp < sd2){
-                    document.getElementById('pyth-output').innerHTML = 'An Error Occured';
-                    console.log('Hyp has to be bigger than the Sides')
-                } else if(noInput(hyp)|| isNaN(hyp)){
+                if(noInput(hyp)|| isNaN(hyp)){
                     solution = sqrt((sd1*sd1)+(sd2*sd2));
                     document.getElementById('pyth-output').innerHTML = solution;
                     console.log('Hypotenuse = ' + solution);
@@ -142,10 +139,18 @@
                     solution = sqrt((parseInt(hyp)*parseInt(hyp))-(parseInt(sd2)*parseInt(sd2)));
                     document.getElementById('pyth-output').innerHTML = solution;
                     console.log('Side 1 = ' + solution);
+                    if(hyp < sd1 || hyp < sd2){
+                        document.getElementById('pyth-output').innerHTML = 'An Error Occured';
+                        console.log('Hyp has to be bigger than the Sides')
+                    }
                 } else if(noInput(sd2)|| isNaN(sd2)){
                     solution = sqrt((parseInt(hyp)*parseInt(hyp))-(parseInt(sd1)*parseInt(sd1)));
                     document.getElementById('pyth-output').innerHTML = solution;
                     console.log('Side 2 = ' + solution);
+                    if(hyp < sd1 || hyp < sd2){
+                        document.getElementById('pyth-output').innerHTML = 'An Error Occured';
+                        console.log('Hyp has to be bigger than the Sides')
+                    }
                 } else {
                     console.log('An Error Occured');
                     document.getElementById('pyth-output').innerHTML = 'An Error Occured';
