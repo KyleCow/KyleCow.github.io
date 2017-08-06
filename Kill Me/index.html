@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  
+  <style>
+    h1{
+      font-family: Monospace;
+      color: rgb(15,150,25)
+    }
+    p{
+      font-family: Monospace;
+      color: rgb(10,150,15)
+    }
+    body{
+      background-image: url("http://wallpapercave.com/wp/9WneW6j.jpg")
+    }
+    div{
+      font-family: Monospace;
+      color: rgb(10,150,15)
+    }
+  </style>
+  
+  <head>
+    <title>
+      Kill Me
+    </title>
+    <h1>
+      Kill Me
+    </h1>
+  </head>
+  
+  <body>
+    <p>
+      Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me Kill Me
+    </p><br>
+    <button onclick='killMe()'>Kill Me</button><br><br>
+    <div id = "kill-me"></div>
+    <script>
+      var KillMe;
+      var n = 1;
+      function killMe(){
+        n = n + 1;
+        KillMe = "kill me ".repeat(n);
+        document.getElementById('kill-me').innerHTML = KillMe;
+      }
+    </script>
+  </body>
+</html>
