@@ -315,17 +315,11 @@
                 c = 0
               }
 
-              console.log(a);
-              console.log(b);
-              console.log(c);
-
               solutionP = (b * b) - 4 * a * c;
               solutionP = sqrt(solutionP);
               solutionP =  (0 - b) + solutionP;
               solutionP = solutionP / 2 * a;
               solutionP = 0 - solutionP;
-
-              console.log(solutionP);
 
               solutionM = (b * b) - 4 * a * c;
               solutionM = sqrt(solutionM);
@@ -333,11 +327,7 @@
               solutionM = solutionM / 2 * a;
               solutionM = 0 - solutionM;
 
-              console.log(solutionM);
-
               solution = 'x = ' + solutionP + ' , ' + solutionM;
-
-              console.log(solution);
 
               document.getElementById('quad-output').innerHTML = solution;
             }
