@@ -101,6 +101,7 @@
         <label>b =</label><input type='number' id='b'><br>
         <label>c =</label><input type='number' id='c'><br>
         <button onclick='quadratic()'>Solve X</button>
+		<button onclick='factorise()'>Factorise</button>
         <div id = 'quad-output'></div>
         <p>
 	      <script>
@@ -342,7 +343,7 @@
 				  solutionM =  (0 - b) - solutionM;
 				  solutionM = solutionM / 2 * a;
 				  solutionM = 0 - solutionM;
-				  return (solutionM);
+				  return (solutionP);
 			  }
 			function quadratic(){
               
@@ -351,6 +352,13 @@
 			  document.getElementById('quad-output').innerHTML = solution;
 			  
             }
+			function factorise(){
+				
+				solution = '(' + (0 - solP) ')' + '(' + (0 - solM) + ')'
+			
+				document.getElementById('quad-output').innerHTML = solution;
+				
+			}
         </script>
     </body>
 </html>
