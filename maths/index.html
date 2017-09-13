@@ -101,7 +101,7 @@
         <label>b =</label><input type='number' id='b'><br>
         <label>c =</label><input type='number' id='c'><br>
         <button onclick='quadratic()'>Solve X</button>
-	<!-- <button onclick='factorise()'>Factorise</button> -->
+	      <!-- <button onclick='factorise()'>Factorise</button> -->
         <div id = 'quad-output'></div>
         <p>
 	      <script>
@@ -355,9 +355,11 @@
 				var solp = solP();
 				var solm = solM();
 				var a;
-				var x;
+				var x2;
+				var x3;
 				
-				x = 'x';
+				x3 = 'x'
+				x2 = 'x';
 				solp = solP();
 				solm = solM();
 				a = document.getElementById('a').value;
@@ -366,13 +368,13 @@
 					a = 1;
                 }
 				
-				if(solp % a){
+				if(solp % a == 0){
 					solp = solp/a;
 				} else {
 					x3 = a + x3;
 				}
 				
-				if(solm % a){
+				if(solm % a == 0){
 					solm = solm/a;
 				} else {
 					x2 = a + x2;
