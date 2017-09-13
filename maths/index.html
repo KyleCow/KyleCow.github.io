@@ -108,10 +108,8 @@
             var solution = 0, f, m, a, sd1, sd2, hyp, x1, y1, x2, y2, midx, midy, sides, r;
             function noInput(variable) {
                 if (typeof variable == 'undefined' || variable == '' || variable == null || isNaN(variable)) {
-                    console.log(true);
                     return true;
                 } else {
-                    console.log(false);
                     return false;
                 }
             }
@@ -313,9 +311,13 @@
                 }
 				
 				solutionP = (b * b) - 4 * a * c;
+		    		console.log(solutionP)
 				solutionP = sqrt(solutionP);
+		    		console.log(solutionP)
 				solutionP =  (0 - b) + solutionP;
+		    		console.log(solutionP)
 				solutionP = solutionP / 2 * a;
+		    		console.log(solutionP)
 				solutionP = 0 - solutionP;
 		    
 		    		console.log(solutionP)
@@ -341,12 +343,16 @@
 					c = 0;
                 }
 				solutionM = (b * b) - 4 * a * c;
+				console.log(solutionM);
 				solutionM = sqrt(solutionM);
+				console.log(solutionM);
 				solutionM =  (0 - b) - solutionM;
+				console.log(solutionM);
 				solutionM = solutionM / 2 * a;
+				console.log(solutionM);
 				solutionM = 0 - solutionM;
 				
-				console.log(solutionM)
+				console.log(solutionM);
 				
 				return (solutionM);
 			}
