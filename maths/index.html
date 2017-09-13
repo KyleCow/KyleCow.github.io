@@ -299,7 +299,7 @@
 				a = document.getElementById('a').value;
 				b = document.getElementById('b').value;
 				c = document.getElementById('c').value;
-				  
+
 				if(noInput(a)){
 					a = 1;
                 }
@@ -309,7 +309,7 @@
                 if(noInput(a)){
 					c = 0;
                 }
-				
+
 				solutionP = (b * b) - 4 * a * c;
 				if(solutionP < 0){
 					solutionP = 0 - solutionP;
@@ -324,7 +324,7 @@
 					solutionP = solutionP / 2 * a;
 					solutionP = 0 - solutionP;
 				}
-		    
+
 				return (solutionP);
 			}
 			function solM(){
@@ -335,7 +335,7 @@
 				a = document.getElementById('a').value;
 				b = document.getElementById('b').value;
 				c = document.getElementById('c').value;
-				  
+
 				if(noInput(a)){
 					a = 1;
                 }
@@ -348,36 +348,36 @@
 				solutionM = (b * b) - 4 * a * c;
 				if(solutionM < 0){
 					solutionM = 0 - solutionM;
-					solutionM = sqrt(solutionM;
+					solutionM = sqrt(solutionM);
 					solutionM =  (0 - b) + solutionM;
 					solutionM = solutionM/ 2 * a;
 					solutionM = 0 - solutionM
 					solutionM= solutionM+ 'i';
 				} else {
-					solutionM= sqrt(solutionM;
+					solutionM= sqrt(solutionM);
 					solutionM=  (0 - b) + solutionM
 					solutionM= solutionM/ 2 * a;
-					solutionM= 0 - solutionM
+					solutionM= 0 - solutionM;
 				}
-				
+
 				console.log(solutionM);
-				
+
 				return (solutionM);
 			}
 			function quadratic(){
-              		  var solm;
+        var solm;
 			  var solp;
-			
+
 			  solp = solP();
 			  solm = solM();
-			  
+
 
 			  solution = 'x = ' + solp + ' , ' + solm;
-              
+
 			  console.log(solution);
-				
+
 			  document.getElementById('quad-output').innerHTML = solution;
-			  
+
             }
 			function factorise(){
 				var solp = solP();
@@ -385,13 +385,13 @@
 				var a;
 				var x2;
 				var x3;
-				
+
 				x3 = 'x'
 				x2 = 'x';
 				solp = solP();
 				solm = solM();
 				a = document.getElementById('a').value;
-				
+
 				if(noInput(a)){
 					a = 1;
                 }
@@ -400,17 +400,17 @@
 				} else {
 					x3 = a + x3;
 				}
-				
+
 				if(solm % a == 0){
 					solm = solm/a;
 				} else {
 					x2 = a + x2;
 				}
-				
+
 				solution = '(' + x2 + '+' + solm + ')' + '(' + x3 + '+' + solp + ')'
-			
+
 				document.getElementById('quad-output').innerHTML = solution;
-				
+
 			}
         </script>
     </body>
