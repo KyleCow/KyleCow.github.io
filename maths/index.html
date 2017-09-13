@@ -95,7 +95,7 @@
         <button onclick='circleCirc()'>Circumferance</button>
         <div id = circleA-output></div>
         <p id='title'>Quadratics</p>
-        <p>ax<sup>2</sup> + bx + c</p>
+        <p>ax<sup>2</sup> + bx + c = 0</p>
         <p>`x = (-b +- sqrt(b^2-4ac))/(2a)`</p>
         <label>a =</label><input type='number' id='a'><br>
         <label>b =</label><input type='number' id='b'><br>
@@ -345,9 +345,19 @@
 				return (solutionM);
 			}
 			function quadratic(){
+              		  var solm;
+			  var solp;
+			
+			  solp = solP();
+			  solm = solM();
+			  
+			  console.log(solp);
+			  console.log(solm);
+				
+			  solution = 'x = ' + solp + ' , ' + solm;
               
-			  solution = 'x = ' + solP() + ' , ' + solM();
-              
+			  console.log(solution);
+				
 			  document.getElementById('quad-output').innerHTML = solution;
 			  
             }
@@ -367,7 +377,6 @@
 				if(noInput(a)){
 					a = 1;
                 }
-				
 				if(solp % a == 0){
 					solp = solp/a;
 				} else {
