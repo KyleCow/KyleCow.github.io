@@ -101,7 +101,7 @@
         <label>b =</label><input type='number' id='b'><br>
         <label>c =</label><input type='number' id='c'><br>
         <button onclick='quadratic()'>Solve X</button>
-	<button onclick='factorise()'>Factorise</button>
+	<!-- <button onclick='factorise()'>Factorise</button> -->
         <div id = 'quad-output'></div>
         <p>
 	      <script>
@@ -294,57 +294,56 @@
               document.getElementById('circleA-output').innerHTML = solution;
             }
             function solP(){
-				  var solutionP;
-				  var a;
-				  var b;
-				  var c;
-				  a = document.getElementById('a').value;
-				  b = document.getElementById('b').value;
-				  c = document.getElementById('c').value;
+				var solutionP;
+				var a;
+				var b;
+				var c;
+				a = document.getElementById('a').value;
+				b = document.getElementById('b').value;
+				c = document.getElementById('c').value;
 				  
-				  if(noInput(a)){
+				if(noInput(a)){
 					a = 1;
-                  }
-                  if(noInput(a)){
+                }
+                if(noInput(a)){
 					b = 1;
-                  }
-                  if(noInput(a)){
+                }
+                if(noInput(a)){
 					c = 0;
-                  
-				  }
-				  solutionP = (b * b) - 4 * a * c;
-				  solutionP = sqrt(solutionP);
-				  solutionP =  (0 - b) + solutionP;
-				  solutionP = solutionP / 2 * a;
-				  solutionP = 0 - solutionP;
-				  return (solutionP);
-			  }
-			  function solM(){
-				  var solutionM;
-				  var a;
-				  var b;
-				  var c;
-				  a = document.getElementById('a').value;
-				  b = document.getElementById('b').value;
-				  c = document.getElementById('c').value;
+                }
+				
+				solutionP = (b * b) - 4 * a * c;
+				solutionP = sqrt(solutionP);
+				solutionP =  (0 - b) + solutionP;
+				solutionP = solutionP / 2 * a;
+				solutionP = 0 - solutionP;
+				return (solutionP);
+			}
+			function solM(){
+				var solutionM;
+				var a;
+				var b;
+				var c;
+				a = document.getElementById('a').value;
+				b = document.getElementById('b').value;
+				c = document.getElementById('c').value;
 				  
-				  if(noInput(a)){
+				if(noInput(a)){
 					a = 1;
-                  }
-                  if(noInput(a)){
+                }
+                if(noInput(a)){
 					b = 1;
-                  }
-                  if(noInput(a)){
+                }
+                if(noInput(a)){
 					c = 0;
-                  
-				  }
-				  solutionM = (b * b) - 4 * a * c;
-				  solutionM = sqrt(solutionM);
-				  solutionM =  (0 - b) - solutionM;
-				  solutionM = solutionM / 2 * a;
-				  solutionM = 0 - solutionM;
-				  return (solutionM);
-			  }
+                }
+				solutionM = (b * b) - 4 * a * c;
+				solutionM = sqrt(solutionM);
+				solutionM =  (0 - b) - solutionM;
+				solutionM = solutionM / 2 * a;
+				solutionM = 0 - solutionM;
+				return (solutionM);
+			}
 			function quadratic(){
               
 			  solution = 'x = ' + solP() + ' , ' + solM();
@@ -362,6 +361,10 @@
 				solp = solP();
 				solm = solM();
 				a = document.getElementById('a').value;
+				
+				if(noInput(a)){
+					a = 1;
+                }
 				
 				if(solp % a){
 					solp = solp/a;
