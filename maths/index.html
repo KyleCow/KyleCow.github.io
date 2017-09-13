@@ -353,8 +353,29 @@
 			  
             }
 			function factorise(){
+				var solp = solP();
+				var solm = solM();
+				var a;
+				var x;
 				
-				solution = '(' + (0 - solP) + ')' + '(' + (0 - solM) + ')'
+				x = 'x';
+				solp = solP();
+				solm = solM();
+				a = document.getElementById('a').value;
+				
+				if(solp % a){
+					solp = solp/a;
+				} else {
+					x3 = a + x3;
+				}
+				
+				if(solm % a){
+					solm = solm/a;
+				} else {
+					x2 = a + x2;
+				}
+				
+				solution = '(' + x2 + '+' + solm + ')' + '(' + x3 + '+' + solp + ')'
 			
 				document.getElementById('quad-output').innerHTML = solution;
 				
