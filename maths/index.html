@@ -335,126 +335,126 @@
               document.getElementById('circleA-output').innerHTML = solution;
             }
             function solP(){
-				var solutionP;
-				var a;
-				var b;
-				var c;
-				a = document.getElementById('a').value;
-				b = document.getElementById('b').value;
-				c = document.getElementById('c').value;
+      				var solutionP;
+      				var a;
+      				var b;
+      				var c;
+      				a = document.getElementById('a').value;
+      				b = document.getElementById('b').value;
+      				c = document.getElementById('c').value;
 
-				if(noInput(a)){
-					a = 1;
-                }
-                if(noInput(a)){
-					b = 1;
-                }
-                if(noInput(a)){
-					c = 0;
-                }
+      			if(noInput(a)){
+      					a = 1;
+                      }
+                      if(noInput(a)){
+      					b = 1;
+                      }
+                      if(noInput(a)){
+      					c = 0;
+                      }
 
-				solutionP = (b * b) - 4 * a * c;
-				if(solutionP < 0){
-					solutionP = 0 - solutionP;
-					solutionP = sqrt(solutionP);
-					solutionP =  (0 - b) + solutionP;
-					solutionP = solutionP / 2 * a;
-					solutionP = 0 - solutionP;
-					solutionP = solutionP + 'i';
-				} else {
-					solutionP = sqrt(solutionP);
-					solutionP =  (0 - b) + solutionP;
-					solutionP = solutionP / 2 * a;
-					solutionP = 0 - solutionP;
-				}
+      				solutionP = (b * b) - 4 * a * c;
+      				if(solutionP < 0){
+      					solutionP = 0 - solutionP;
+      					solutionP = sqrt(solutionP);
+      					solutionP =  (0 - b) + solutionP;
+      					solutionP = solutionP / 2 * a;
+      					solutionP = 0 - solutionP;
+      					solutionP = solutionP + 'i';
+      				} else {
+      					solutionP = sqrt(solutionP);
+      					solutionP =  (0 - b) + solutionP;
+      					solutionP = solutionP / 2 * a;
+      					solutionP = 0 - solutionP;
+      				}
 
-				return (solutionP);
-			}
-			function solM(){
-				var solutionM;
-				var a;
-				var b;
-				var c;
-				a = document.getElementById('a').value;
-				b = document.getElementById('b').value;
-				c = document.getElementById('c').value;
+      				return (solutionP);
+			      }
+			      function solM(){
+      				var solutionM;
+      				var a;
+      				var b;
+      				var c;
+      				a = document.getElementById('a').value;
+      				b = document.getElementById('b').value;
+      				c = document.getElementById('c').value;
 
-				if(noInput(a)){
-					a = 1;
-                }
-                if(noInput(a)){
-					b = 1;
-                }
-                if(noInput(a)){
-					c = 0;
-                }
-				solutionM = (b * b) - 4 * a * c;
-				if(solutionM < 0){
-					solutionM = 0 - solutionM;
-					solutionM = sqrt(solutionM);
-					solutionM =  (0 - b) + solutionM;
-					solutionM = solutionM/ 2 * a;
-					solutionM = 0 - solutionM
-					solutionM= solutionM+ 'i';
-				} else {
-					solutionM= sqrt(solutionM);
-					solutionM=  (0 - b) + solutionM
-					solutionM= solutionM/ 2 * a;
-					solutionM= 0 - solutionM;
-				}
+      				if(noInput(a)){
+      					a = 1;
+                      }
+                      if(noInput(a)){
+      					b = 1;
+                      }
+                      if(noInput(a)){
+      					c = 0;
+                      }
+      				solutionM = (b * b) - 4 * a * c;
+      				if(solutionM < 0){
+      					solutionM = 0 - solutionM;
+      					solutionM = sqrt(solutionM);
+      					solutionM =  (0 - b) + solutionM;
+      					solutionM = solutionM/ 2 * a;
+      					solutionM = 0 - solutionM
+      					solutionM= solutionM+ 'i';
+      				} else {
+      					solutionM= sqrt(solutionM);
+      					solutionM=  (0 - b) + solutionM
+      					solutionM= solutionM/ 2 * a;
+      					solutionM= 0 - solutionM;
+      				}
 
-				console.log(solutionM);
+      				console.log(solutionM);
 
-				return (solutionM);
-			}
-			function quadratic(){
-        var solm;
-			  var solp;
+      				return (solutionM);
+			      }
+      			function quadratic(){
+              var solm;
+      			  var solp;
 
-			  solp = solP();
-			  solm = solM();
+      			  solp = solP();
+      			  solm = solM();
 
 
-			  solution = 'x = ' + solp + ' , ' + solm;
+      			  solution = 'x = ' + solp + ' , ' + solm;
 
-			  console.log(solution);
+      			  console.log(solution);
 
-			  document.getElementById('quad-output').innerHTML = solution;
+      			  document.getElementById('quad-output').innerHTML = solution;
 
-            }
-			function factorise(){
-				var solp = solP();
-				var solm = solM();
-				var a;
-				var x2;
-				var x3;
+                  }
+      			function factorise(){
+      				var solp = solP();
+      				var solm = solM();
+      				var a;
+      				var x2;
+      				var x3;
 
-				x3 = 'x'
-				x2 = 'x';
-				solp = solP();
-				solm = solM();
-				a = document.getElementById('a').value;
+      				x3 = 'x'
+      				x2 = 'x';
+      				solp = solP();
+      				solm = solM();
+      				a = document.getElementById('a').value;
 
-				if(noInput(a)){
-					a = 1;
-                }
-				if(solp % a == 0){
-					solp = solp/a;
-				} else {
-					x3 = a + x3;
-				}
+      				if(noInput(a)){
+      					a = 1;
+                      }
+      				if(solp % a == 0){
+      					solp = solp/a;
+      				} else {
+      					x3 = a + x3;
+      				}
 
-				if(solm % a == 0){
-					solm = solm/a;
-				} else {
-					x2 = a + x2;
-				}
+      				if(solm % a == 0){
+      					solm = solm/a;
+      				} else {
+      					x2 = a + x2;
+      				}
 
-				solution = '(' + x2 + '+' + solm + ')' + '(' + x3 + '+' + solp + ')'
+      				solution = '(' + x2 + '+' + solm + ')' + '(' + x3 + '+' + solp + ')'
 
-				document.getElementById('quad-output').innerHTML = solution;
+      				document.getElementById('quad-output').innerHTML = solution;
 
-			}
+      			}
         </script>
     </body>
 </html>
