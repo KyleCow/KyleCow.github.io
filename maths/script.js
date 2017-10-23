@@ -237,16 +237,16 @@
                       		if(noInput(a)){
       					c = 0;
                      		}
-      				solutionM = (b * b) - )4 * a * c);
+      				solutionM = (b * b) - (4 * a * c);
       				if(solutionM < 0){
       					solutionM = (0 - b) - solutionM;
       					solutionM = sqrt(solutionM);
-      					solutionM =  (0 - b) + solutionM;
+      					solutionM =  (0 - b) - solutionM;
       					solutionM = solutionM/ 2 * a;
       					solutionM= solutionM + 'i';
       				} else {
       					solutionM= sqrt(solutionM);
-      					solutionM=  (0 - b) + solutionM
+      					solutionM=  (0 - b) - solutionM
       					solutionM= solutionM/ 2 * a;
       				}
 
