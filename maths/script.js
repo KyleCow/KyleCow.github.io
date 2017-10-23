@@ -1,4 +1,5 @@
-            var solution = 0, f, m, a, sd1, sd2, hyp, x1, y1, x2, y2, midx, midy, sides, r;
+            var solution =  0
+	    var f, m, a, sd1, sd2, hyp, x1, y1, x2, y2, midx, midy, sides, r;
             function noInput(variable) {
                 if (typeof variable == 'undefined' || variable == '' || variable == null || isNaN(variable)) {
                     return true;
