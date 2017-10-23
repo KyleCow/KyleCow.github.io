@@ -210,13 +210,11 @@
       					solutionP = sqrt(solutionP);
       					solutionP =  (0 - b) + solutionP;
       					solutionP = solutionP / 2 * a;
-      					solutionP = 0 - solutionP;
       					solutionP = solutionP + 'i';
       				} else {
       					solutionP = sqrt(solutionP);
       					solutionP =  (0 - b) + solutionP;
       					solutionP = solutionP / 2 * a;
-      					solutionP = 0 - solutionP;
       				}
 
       				return (solutionP);
@@ -245,13 +243,11 @@
       					solutionM = sqrt(solutionM);
       					solutionM =  (0 - b) + solutionM;
       					solutionM = solutionM/ 2 * a;
-      					solutionM = 0 - solutionM
       					solutionM= solutionM + 'i';
       				} else {
       					solutionM= sqrt(solutionM);
       					solutionM=  (0 - b) + solutionM
       					solutionM= solutionM/ 2 * a;
-      					solutionM= 0 - solutionM;
       				}
 
       				console.log(solutionM);
