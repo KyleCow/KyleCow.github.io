@@ -203,7 +203,7 @@
       					c = 0;
                       }
 
-      				solutionP = (b * b) - 4 * a * c;
+      				solutionP = (b * b) - (4 * a * c);
       				if(solutionP < 0){
       					solutionP = 0 - solutionP;
       					solutionP = sqrt(solutionP);
@@ -238,7 +238,7 @@
                       		if(noInput(a)){
       					c = 0;
                      		}
-      				solutionM = (b * b) - 4 * a * c;
+      				solutionM = (b * b) - )4 * a * c);
       				if(solutionM < 0){
       					solutionM = (0 - b) - solutionM;
       					solutionM = sqrt(solutionM);
