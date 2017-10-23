@@ -1,0 +1,15 @@
+    h1{
+      font-family: Monospace;
+      color: rgb(15,150,25)
+    }
+    p{
+      font-family: Monospace;
+      color: rgb(10,150,15)
+    }
+    body{
+      background-image: url("TurtleBurger.jpg")
+    }
+    div{
+      font-family: Monospace;
+      color: rgb(10,150,15)
+    }
