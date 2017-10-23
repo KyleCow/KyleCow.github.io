@@ -197,7 +197,7 @@
       					a = 1;
                       }
                       if(noInput(a)){
-      					b = 1;
+      					b = 0
                       }
                       if(noInput(a)){
       					c = 0;
@@ -231,21 +231,21 @@
 
       				if(noInput(a)){
       					a = 1;
-                      }
-                      if(noInput(a)){
-      					b = 1;
-                      }
-                      if(noInput(a)){
+                     		 }
+                     		 if(noInput(a)){
+      					b = 0
+                      		}
+                      		if(noInput(a)){
       					c = 0;
-                      }
+                     		}
       				solutionM = (b * b) - 4 * a * c;
       				if(solutionM < 0){
-      					solutionM = 0 - solutionM;
+      					solutionM = (0 - b) - solutionM;
       					solutionM = sqrt(solutionM);
       					solutionM =  (0 - b) + solutionM;
       					solutionM = solutionM/ 2 * a;
       					solutionM = 0 - solutionM
-      					solutionM= solutionM+ 'i';
+      					solutionM= solutionM + 'i';
       				} else {
       					solutionM= sqrt(solutionM);
       					solutionM=  (0 - b) + solutionM
@@ -258,7 +258,7 @@
       				return (solutionM);
 			      }
       			function quadratic(){
-              var solm;
+              		  var solm;
       			  var solp;
 
       			  solp = solP();
