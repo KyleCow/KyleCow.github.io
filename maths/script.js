@@ -107,6 +107,7 @@ function gradient(){
         document.getElementById('linear-output').innerHTML = 'An Error Occured';
     }
     document.getElementById('linear-output').innerHTML = solution;
+    return(solution)
 }
 function yIntercept(){
     var solution;
@@ -121,7 +122,15 @@ function yIntercept(){
         document.getElementById('linear-output').innerHTML = 'An Error Occured';
     }
     document.getElementById('linear-output').innerHTML = solution;
+    return(solution)
 }
+
+function LinEquasion(){
+    var solution;
+    solution = gradien() + '+' + yIntercept()
+    document.getElementById('linear-output').innerHTML = solution;
+}
+
 function polygonAngle(){
     var solution;
     sides = document.getElementById('sides').value;
