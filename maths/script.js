@@ -127,7 +127,11 @@ function yIntercept(){
 
 function LinEquasion(){
     var solution;
-    solution = gradien() + '+' + yIntercept()
+    var grad;
+    var yIn;
+    grad = gradient();
+    yIn = yIntercept();
+    solution = grad + '+' + yIn;
     document.getElementById('linear-output').innerHTML = solution;
 }
 
