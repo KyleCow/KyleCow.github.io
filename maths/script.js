@@ -131,7 +131,7 @@ function LinEquasion(){
     var yIn;
     grad = gradient();
     yIn = yIntercept();
-    solution = grad + '+' + yIn;
+    solution = grad+'x + '+yIn;
     document.getElementById('linear-output').innerHTML = solution;
 }
 
