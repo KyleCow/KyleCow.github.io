@@ -315,3 +315,14 @@ function factorise(){
   document.getElementById('quad-output').innerHTML = solution;
 
 }
+function gravity(){
+  var m1 = document.getElementById('m1').value;
+  var m2 = document.getElementById('m2').value;
+  var r = document.getElementById('gravR').value;
+  var soulution;
+
+  solution = 6.67 * 10e-11 * m1 * m2;
+  solution = solution / (r*r);
+
+  document.getElementById('grav-output').innerHTML = solution;
+}
