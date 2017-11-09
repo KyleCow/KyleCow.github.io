@@ -1,5 +1,6 @@
 .live-search-box{
-    text-allign: centre;
+    width:-webkit-fill-available;
+    
 }
 .output{
     margin-bottom:20px;
