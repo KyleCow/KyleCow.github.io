@@ -326,3 +326,31 @@ function gravity(){
 
   document.getElementById('grav-output').innerHTML = solution;
 }
+function halfLife(){
+  var hl = document.getElementById('hl').value;
+  var time = document.getElementById('time').value;
+  var b = document.getElementById('beginning').value;
+  var e = document.getElementById('end').value;
+  var soulution;
+
+  if(noInput(hl)){
+    solution = b/e;
+    solution = Math.log2(solution);
+    solution = time/solution;
+  }else if(noInput(time)){
+    solution = b/e;
+    solution = Math.log2(solution);
+    solution = hl * solution;
+  }else if(noInput(b)){
+    solution = time/hl;
+    solution = Math.pow(2, solution);
+    solution = e * solution;
+  }else if(noInput(e)){
+    solution = time/hl;
+    solution = Math.pow(2, solution);
+    solution = b/solution;
+  }else{
+    solution = 'an error occured'
+  }
+  document.getElementById('hl-output').innerHTML = solution;
+}
