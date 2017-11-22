@@ -1,7 +1,3 @@
-.live-search-box{
-    width:-webkit-fill-available;
-    text-align: center;
-}
 .output{
     margin-bottom:20px;
     margin-top: 20px;
@@ -38,8 +34,8 @@ input {
 }
 button{
     padding: 2px;
-    border-radius: 4px;
     align-content: center;
+    border-radius: 4px;
     font-family: 'Share Tech Mono', monospace;
 }
 p{
