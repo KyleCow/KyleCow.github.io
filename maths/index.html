@@ -51,7 +51,7 @@
           <label>Y<sub>1</sub> =</label><input type = 'number' id = 'y1'><br>
           <label>X<sub>2</sub> =</label><input type = 'number' id = 'x2'><br>
           <label>Y<sub>2</sub> =</label><input type = 'number' id = 'y2'><br>
-          <button onclick='lineLength()'>Line Length</button>
+          <button style='margin-left: -140px;' onclick='lineLength()'>Line Length</button>
           <button onclick='midpoint()'>Midpoint</button>
           <button onclick='gradient()'>Gradient</button>
           <button onclick='yIntercept()'>Y-Intercept</button>
@@ -125,6 +125,18 @@
           <div class='output' id = 'hl-output'></div>
         </div>
       </li>
+      <li>
+        <div class = 'header'>
+          <p id='title'>True Relative Motion</p>
+        </div>
+        <div class = 'content'>
+          <p>`(v_1+v_2)/(1+(v_1v_2)/c^2)`</p>
+          <label>v<sub>1</sub>(m/s)</label><input type = 'number' id = 'vl'><br>
+          <label>v<sub>2</sub>(m/s)</label><input type = 'number' id = 'v2'><br>
+          <button style='margin-left: -140px;' onclick='basicMotion()'>Basic</button>
+          <button onclick='trueMotion()'>True</button>
+          <div class='output' id = 'rel-output'></div>
+        </div>
     </ul>
     <script src="script.js"></script>
   </body>
