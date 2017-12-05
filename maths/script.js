@@ -357,16 +357,16 @@ function halfLife(){
 function basicMotion(){
   var v1 = document.getElementById('vl').value;
   var v2 = document.getElementById('v2').value;
-  v1 = number(v1)
-  v2 = number(v2)
+  v1 = number(v1);
+  v2 = number(v2);
   solution = v1 + v2;
   document.getElementById('rel-output').innerHTML = solution;
 }
 function trueMotion(){
   var v1 = document.getElementById('vl').value;
   var v2 = document.getElementById('v2').value;
-  v1 = number(v1)
-  v2 = number(v2)
+  v1 = number(v1);
+  v2 = number(v2);
   var c = 299792458*299792458;
 
   solution = 1 + ((v1 * v2)/c);
