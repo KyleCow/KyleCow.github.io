@@ -29,7 +29,13 @@ a:link, a:visited{
 }
 a:hover, a:active{
   background-color: red;
+  height: 20px;
+  font-size:110%;
+  margin-top: -20px;
 }
 footer{
-  margin-top: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+  bottom:0;
+  width:100%;
 }
