@@ -359,18 +359,94 @@ function basicMotion(){
   var v2 = document.getElementById('v2').value;
   v1 = Number(v1);
   v2 = Number(v2);
+
   solution = v1 + v2;
+
   document.getElementById('rel-output').innerHTML = solution;
 }
 function trueMotion(){
   var v1 = document.getElementById('vl').value;
   var v2 = document.getElementById('v2').value;
+  var c = 299792458*299792458;
   v1 = Number(v1);
   v2 = Number(v2);
-  var c = 299792458*299792458;
 
-  solution = 1 + ((v1 * v2)/c);
+  solution = v1 * v2;
+  solution = solution/c;
+  solution = 1 + solution;
   solution = (v1 + v2) / solution;
 
   document.getElementById('rel-output').innerHTML = solution;
+}
+/*
+function suvat(){
+  var s = document.getElementById('s').value;
+  var u = document.getElementById('u').value;
+  var v = document.getElementById('v').value;
+  var a = document.getElementById('a').value;
+  var t = document.getElementById('t').value;
+
+  if(noInput(s)){
+    if(noInput(u)){
+
+    } else if(noInput(v)){
+
+    } else if(noInput(a)){
+
+    } else if(noInput(t)){
+
+    }
+  } else if(noInput(u)){
+    if(noInput(s)){
+
+    } else if(noInput(v)){
+
+    } else if(noInput(a)){
+
+    } else if(noInput(t)){
+
+    }
+  } else if(noInput(v)){
+    if(noInput(s)){
+
+    } else if(noInput(u)){
+
+    } else if(noInput(a)){
+
+    } else if(noInput(t)){
+
+    }
+  } else if(noInput(a)){
+    if(noInput(s)){
+
+    } else if(noInput(u)){
+
+    } else if(noInput(v)){
+
+    } else if(noInput(t)){
+
+    }
+  } else if(noInput(t)){
+    if(noInput(s)){
+
+    } else if(noInput(u)){
+
+    } else if(noInput(v)){
+
+    } else if(noInput(a)){
+
+    }
+  }
+  */
+function gamma(){
+  var v = document.getElementById('gammav').value;
+  var solution;
+  var c = 299792458;
+
+  solution = (v*v)/(c*c);
+  solution = 1 - solution;
+  solution = sqrt(solution);
+  solution = 1/solution;
+
+  document.getElementById('gamma-output').innerHTML = solution;
 }
