@@ -450,3 +450,19 @@ function gamma(){
 
   document.getElementById('gamma-output').innerHTML = solution;
 }
+function emc(){
+  var e = document.getElementById('emcE').value;
+  var m = document.getElementById('emcM').value;
+  var c = 299792458;
+  var solution:
+
+  if noInput(e){
+    solution = m * (c*c)
+  } else if noInput(m){
+    solution = e / (c*c)
+  } else {
+    solution = 'an error occured'
+  }
+
+  document.getElementById('emc-output').innerHTML = solution;
+}
