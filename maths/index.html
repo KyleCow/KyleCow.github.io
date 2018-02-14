@@ -117,10 +117,10 @@
         </div>
         <div class = 'content'>
           <p id=small>(Leave the parameters that you want to solve for blank)</p>
-          <label>Half life</label><input type = 'number' id = 'hl'><br>
-          <label>Time Elapsed</label><input type = 'number' id = 'time'><br>
-          <label>Beginning Ammount</label><input type = 'number' id = 'beginning'><br>
-          <label>End Ammount</label><input type = 'number' id = 'end'><br>
+          <label>Half life =</label><input type = 'number' id = 'hl'><br>
+          <label>Time Elapsed =</label><input type = 'number' id = 'time'><br>
+          <label>Beginning Ammount =</label><input type = 'number' id = 'beginning'><br>
+          <label>End Ammount =</label><input type = 'number' id = 'end'><br>
           <button onclick='halfLife()'>Evaluate</button>
           <div class='output' id = 'hl-output'></div>
         </div>
@@ -131,8 +131,8 @@
         </div>
         <div class = 'content'>
           <p>`(v_1+v_2)/(1+(v_1v_2)/c^2)`</p>
-          <label>v<sub>1</sub>(m/s)</label><input type = 'number' id = 'vl'><br>
-          <label>v<sub>2</sub>(m/s)</label><input type = 'number' id = 'v2'><br>
+          <label>v<sub>1</sub>(m/s) =</label><input type = 'number' id = 'vl'><br>
+          <label>v<sub>2</sub>(m/s =</label><input type = 'number' id = 'v2'><br>
           <button style='margin-left: -140px;' onclick='basicMotion()'>Basic</button>
           <button onclick='trueMotion()'>True</button>
           <div class='output' id = 'rel-output'></div>
@@ -163,11 +163,22 @@
         <div class = 'header'>
           <p id = 'title'>Gamma factor, relativity</p>
         </div>
-        <div>
+        <div class = 'content'>
           <p>`t=tau/(sqrt(1-v^2/c^2))=gammatau`</p>
-          <label>v(m/s)</label><input type = 'number' id = 'gammav'><br>
+          <label>v<sub>1</sub>(m/s) =</label><input type = 'number' id = 'gammav'><br>
           <button onclick='gamma()'>Calculate `gamma`</button>
           <div class='output' id = 'gamma-output'></div>
+        </div>
+      </li>
+      <li>
+        <div class = 'header'>
+          <p id = 'title'>E = MC<sup>2</sup></p>
+        </div>
+        <div class = 'content'>
+          <label>Mass =</label><input type = 'number' id = 'emcM'><br>
+          <label>Energy =</label><input type = 'number' id = 'emcE'><br>
+          <button onclick='emc()'>Calculate</button>
+          <div class='output' id = 'emc-output'></div>
         </div>
       </li>
     </ul>
