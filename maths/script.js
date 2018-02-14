@@ -454,11 +454,11 @@ function emc(){
   var e = document.getElementById('emcE').value;
   var m = document.getElementById('emcM').value;
   var c = 299792458;
-  var solution:
+  var solution;
 
-  if noInput(e){
+  if(noInput(e)){
     solution = m * (c*c)
-  } else if noInput(m){
+  } else if(noInput(m)){
     solution = e / (c*c)
   } else {
     solution = 'an error occured'
