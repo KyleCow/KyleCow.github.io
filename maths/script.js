@@ -466,3 +466,26 @@ function emc(){
 
   document.getElementById('emc-output').innerHTML = solution;
 }
+function planet(){
+  var m = document.getElementById('planM').value;
+  var r = document.getElementById('planR').value;
+  var a = document.getElementById('planA').value;
+  var g = 6.67408 * Math.pow(10,-11);
+  var solution;
+
+  if(noInput(a)){
+    solution = r*r;
+    solution = m/solution;
+    solution = g*solution;
+  } else if(noInput(r)){
+    solution = g*m;
+    solution = solution/a;
+    solution = sqrt(solution);
+  } else if(noInput(m)){
+    solution = d*d;
+    solution = a*solution;
+    solution = solution/g;
+  }
+
+  document.getElementById('plan-output').innerHTML = solution;
+}
