@@ -193,6 +193,20 @@
           <button onclick='planet()'>Calculate</button>
           <div class='output' id = 'plan-output'></div>
         </div>
+      </li>
+      <li>
+        <div class = 'header'>
+          <p id = 'title'>Simple Derivitive/Integral</p>
+        </div>
+        <div class = 'content'>
+          <p>`int(ax^b)dx=(ax^(b+1))/(b+1)`</p>
+          <p>`d/dx(ax^b)=abx^(b-1)`</p>
+          <label>a =</label><input type = 'number' id = 'divA'><br>
+          <label>b =</label><input type = 'number' id = 'divB'><br>
+          <button onclick='sInt()'>Integrate</button>
+          <button onclick='sDiv()'>Derive</button>
+          <div class='output' id = 'int-output'></div>
+        </div>
     </ul>
     <script src="script.js"></script>
   </body>
