@@ -489,3 +489,33 @@ function planet(){
 
   document.getElementById('plan-output').innerHTML = solution;
 }
+function sInt(){
+  var a = document.getElementById('divA').value;
+  var b = document.getElementById('divB').value;
+  var solution;
+  var solution1;
+  var solution2;
+
+  solution1 = a/(b+1);
+  solution2 = b+1;
+  solution = String(solution1)+'x^'+String(solution2);
+
+  console.log(solution);
+
+  document.getElementById('int-output').innerHTML = solution;
+}
+function sDiv(){
+  var a = document.getElementById('divA').value;
+  var b = document.getElementById('divB').value;
+  var solution;
+  var solution1;
+  var solution2;
+
+  solution1 = a*b;
+  solution2 = b-1;
+  solution = String(solution1)+'x^'+String(solution2);
+
+  console.log(solution);
+
+  document.getElementById('int-output').innerHTML = solution;
+}
