@@ -13,225 +13,256 @@
     <input type="text" class="live-search-box" placeholder="Search For A Formula...">
     <ul class="live-search-list container" style="list-style-type:none">
       <li>
-        <div class = 'header'>
-          <p id='title'>A * B = C</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class ='content'>
-          <p id = 'small'>Common Layout For Formuals</p>
-          <p id = 'small'>(Leave the parameters that you want to solve for blank)</p>
-          <label>C =</label><input type='number' id='Force'><br>
-          <label>A =</label><input type='number' id='Acceleration'><br>
-          <label>B =</label><input type='number' id='Mass'><br>
-          <button onclick='newtonSecond()'>Evaluate</button><br>
-          <div class='output' id='newt-output'></div>
-        </div>
-      </li>
-      <li>
-        <div class = 'header'>
-          <p id='title'>The Pythagorean theorem</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class ='content'>
-          <p>Hypotenuse<sup>2</sup> = Side1<sup>2</sup> + Side2<sup>2</sup></p>
-          <p id = 'small'>(Leave the parameters that you want to solve for blank)</p>
-          <p id = 'small'>(The Hypotenuse must be the largest value)</p>
-          <label>Hypotenuse(cm) =</label><input type='number' id='hyp'><br>
-          <label>Side1(cm) =</label><input type='number' id='sd1'><br>
-          <label>Side2(cm) =</label><input type='number' id='sd2'><br>
-          <button onclick='pythagoras()'>Evaluate</button><br>
-          <div class='output' id='pyth-output'></div>
+        <button class="accordion">A * B = C</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id='title'>A * B = C</p>
+          </div>
+          <div class ='content'>
+            <p id = 'small'>Common Layout For Formuals</p>
+            <p id = 'small'>(Leave the parameters that you want to solve for blank)</p>
+            <label>C =</label><input type='number' id='Force'><br>
+            <label>A =</label><input type='number' id='Acceleration'><br>
+            <label>B =</label><input type='number' id='Mass'><br>
+            <button onclick='newtonSecond()'>Evaluate</button><br>
+            <div class='output' id='newt-output'></div>
+          </div>
         </div>
       </li>
       <li>
-        <div class = 'header'>
-          <p id='title'>Linear Graphs</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class ='content'>
-          <p id='small'>Input 2 Coordinates that are on the line</p>
-          <label>X<sub>1</sub> =</label><input type = 'number' id = 'x1'><br>
-          <label>Y<sub>1</sub> =</label><input type = 'number' id = 'y1'><br>
-          <label>X<sub>2</sub> =</label><input type = 'number' id = 'x2'><br>
-          <label>Y<sub>2</sub> =</label><input type = 'number' id = 'y2'><br>
-          <button style='margin-left: -140px;' onclick='lineLength()'>Line Length</button>
-          <button onclick='midpoint()'>Midpoint</button>
-          <button onclick='gradient()'>Gradient</button>
-          <button onclick='yIntercept()'>Y-Intercept</button>
-          <button onClick='LinEquasion()'>Equasion</button><br>
-          <div class='output' id='linear-output'></div>
-        </div>
-      </li>
-      <li>
-        <div class = 'header'>
-          <p id='title'>Angles In Polygon</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class ='content'>
-          <p>`Ang = (Sides - 2 * 180) / (Sides)`</p>
-          <label>No. Sides =</label><input type = 'number' id = 'sides'><br>
-          <button onclick='polygonAngle()'>Angle</button>
-          <button onclick='polygonSum()'>Sum Of Int Angles</button>
-          <button onclick='polygonEx()'>Exterior Angle</button>
-          <button onclick='polygonExSum()'>Sum Of Ext Angles</button>
-          <div class='output' id = 'poly-output'></div>
+        <button class="accordion">The Pythagorean theorem</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id='title'>The Pythagorean theorem</p>
+          </div>
+          <div class ='content'>
+            <p>Hypotenuse<sup>2</sup> = Side1<sup>2</sup> + Side2<sup>2</sup></p>
+            <p id = 'small'>(Leave the parameters that you want to solve for blank)</p>
+            <p id = 'small'>(The Hypotenuse must be the largest value)</p>
+            <label>Hypotenuse(cm) =</label><input type='number' id='hyp'><br>
+            <label>Side1(cm) =</label><input type='number' id='sd1'><br>
+            <label>Side2(cm) =</label><input type='number' id='sd2'><br>
+            <button onclick='pythagoras()'>Evaluate</button><br>
+            <div class='output' id='pyth-output'></div>
+          </div>
         </div>
       </li>
       <li>
-        <div class = 'header'>
-          <p id = title>Circles</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class ='content'>
-          <label>Radius =</label><input type = 'number' id = 'radius'><br>
-          <button onclick='circleArea()'>Area</button>
-          <button onclick='circleCirc()'>Circumferance</button>
-          <div class='output' id = circleA-output></div>
-        </div>
-      </li>
-      <li>
-        <div class = 'header'>
-          <p id='title'>Quadratics</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class ='content'>
-          <p>ax<sup>2</sup> + bx + c = 0</p>
-          <label>a =</label><input type='number' id='a'><br>
-          <label>b =</label><input type='number' id='b'><br>
-          <label>c =</label><input type='number' id='c'><br>
-          <button onclick='quadratic()'>Solve X</button>
-          <!-- <button onclick='factorise()'>Factorise</button> -->
-          <div class='output' id = 'quad-output'></div>
+        <button class="accordion">Linear Graphs</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id='title'>Linear Graphs</p>
+          </div>
+          <div class ='content'>
+            <p id='small'>Input 2 Coordinates that are on the line</p>
+            <label>X<sub>1</sub> =</label><input type = 'number' id = 'x1'><br>
+            <label>Y<sub>1</sub> =</label><input type = 'number' id = 'y1'><br>
+            <label>X<sub>2</sub> =</label><input type = 'number' id = 'x2'><br>
+            <label>Y<sub>2</sub> =</label><input type = 'number' id = 'y2'><br>
+            <button style='margin-left: -140px;' onclick='lineLength()'>Line Length</button>
+            <button onclick='midpoint()'>Midpoint</button>
+            <button onclick='gradient()'>Gradient</button>
+            <button onclick='yIntercept()'>Y-Intercept</button>
+            <button onClick='LinEquasion()'>Equasion</button><br>
+            <div class='output' id='linear-output'></div>
+          </div>
         </div>
       </li>
       <li>
-        <div class = 'header'>
-          <p id='title'>Gravity</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class ='content'>
-          <p>`F_(gravity)=(Gm_1m_2)/r^2`</p>
-          <label>Mass<sub>1</sub>(kg)</label><input type = 'number' id = 'm1'><br>
-          <label>Mass<sub>2</sub>(kg)</label><input type = 'number' id = 'm2'><br>
-          <label>Distance(km)</label><input type = 'number' id = 'gravR'><br>
-          <button onclick='gravity()'>Evaluate</button>
-          <div class='output' id = 'grav-output'></div>
-        </div>
-      </li>
-      <li>
-        <div class='header'>
-          <p id='title'>Radiation Half Life</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class = 'content'>
-          <p id=small>(Leave the parameters that you want to solve for blank)</p>
-          <label>Half life =</label><input type = 'number' id = 'hl'><br>
-          <label>Time Elapsed =</label><input type = 'number' id = 'time'><br>
-          <label>Beginning Ammount =</label><input type = 'number' id = 'beginning'><br>
-          <label>End Ammount =</label><input type = 'number' id = 'end'><br>
-          <button onclick='halfLife()'>Evaluate</button>
-          <div class='output' id = 'hl-output'></div>
+        <button class="accordion">Angles In Polygon</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id='title'>Angles In Polygon</p>
+          </div>
+          <div class ='content'>
+            <p>`Ang = (Sides - 2 * 180) / (Sides)`</p>
+            <label>No. Sides =</label><input type = 'number' id = 'sides'><br>
+            <button onclick='polygonAngle()'>Angle</button>
+            <button onclick='polygonSum()'>Sum Of Int Angles</button>
+            <button onclick='polygonEx()'>Exterior Angle</button>
+            <button onclick='polygonExSum()'>Sum Of Ext Angles</button>
+            <div class='output' id = 'poly-output'></div>
+          </div>
         </div>
       </li>
       <li>
-        <div class = 'header'>
-          <p id='title'>True Relative Motion</p>
+        <button class="accordion">Circles</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id = title>Circles</p>
+          </div>
+          <div class ='content'>
+            <label>Radius =</label><input type = 'number' id = 'radius'><br>
+            <button onclick='circleArea()'>Area</button>
+            <button onclick='circleCirc()'>Circumferance</button>
+            <div class='output' id = circleA-output></div>
+          </div>
+      </div>
+      </li>
+      <li>
+        <button class="accordion">Quadratics</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id='title'>Quadratics</p>
+          </div>
+          <div class ='content'>
+            <p>ax<sup>2</sup> + bx + c = 0</p>
+            <label>a =</label><input type='number' id='a'><br>
+            <label>b =</label><input type='number' id='b'><br>
+            <label>c =</label><input type='number' id='c'><br>
+            <button onclick='quadratic()'>Solve X</button>
+            <!-- <button onclick='factorise()'>Factorise</button> -->
+            <div class='output' id = 'quad-output'></div>
+          </div>
         </div>
-        <button class="accordion">Do Maths</button>
-        <div class = 'content'>
-          <p>`(v_1+v_2)/(1+(v_1v_2)/c^2)`</p>
-          <label>v<sub>1</sub>(m/s) =</label><input type = 'number' id = 'vl'><br>
-          <label>v<sub>2</sub>(m/s =</label><input type = 'number' id = 'v2'><br>
-          <button style='margin-left: -140px;' onclick='basicMotion()'>Basic</button>
-          <button onclick='trueMotion()'>True</button>
-          <div class='output' id = 'rel-output'></div>
+      </li>
+      <li>
+        <button class="accordion">Gravity</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id='title'>Gravity</p>
+          </div>
+          <div class ='content'>
+            <p>`F_(gravity)=(Gm_1m_2)/r^2`</p>
+            <label>Mass<sub>1</sub>(kg)</label><input type = 'number' id = 'm1'><br>
+            <label>Mass<sub>2</sub>(kg)</label><input type = 'number' id = 'm2'><br>
+            <label>Distance(km)</label><input type = 'number' id = 'gravR'><br>
+            <button onclick='gravity()'>Evaluate</button>
+            <div class='output' id = 'grav-output'></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button class="accordion">Radiation Half Life</button>
+        <div class = 'panel'>
+          <div class='header'>
+            <p id='title'>Radiation Half Life</p>
+          </div>
+          <div class = 'content'>
+            <p id=small>(Leave the parameters that you want to solve for blank)</p>
+            <label>Half life =</label><input type = 'number' id = 'hl'><br>
+            <label>Time Elapsed =</label><input type = 'number' id = 'time'><br>
+            <label>Beginning Ammount =</label><input type = 'number' id = 'beginning'><br>
+            <label>End Ammount =</label><input type = 'number' id = 'end'><br>
+            <button onclick='halfLife()'>Evaluate</button>
+            <div class='output' id = 'hl-output'></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button class="accordion">Relative Motion</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id='title'>True Relative Motion</p>
+          </div>
+          <div class = 'content'>
+            <p>`(v_1+v_2)/(1+(v_1v_2)/c^2)`</p>
+            <label>v<sub>1</sub>(m/s) =</label><input type = 'number' id = 'vl'><br>
+            <label>v<sub>2</sub>(m/s =</label><input type = 'number' id = 'v2'><br>
+            <button style='margin-left: -140px;' onclick='basicMotion()'>Basic</button>
+            <button onclick='trueMotion()'>True</button>
+            <div class='output' id = 'rel-output'></div>
+          </div>
         </div>
       </li>
       <!--
       <li>
+      <button class="accordion">SUVAT</button>
+      <div class = 'panel'>
         <div class = 'header'>
           <p id = 'title'>Isaac Newton (SUVAT)</p>
         </div>
-        <div class = 'content'>
-          <p>`v = u + at`</p>
-          <p>`s = ut + 1/2at^2`</p>
-          <p>`s = 1/2(u+v)t`</p>
-          <p>`v^2=u^2+2as`</p>
-          <p>`s=vt-1/2at^2`</p>
-          <label>S(Distance)</label><input type = 'number' id = 's'><br>
-          <label>U(Initial Velocity)</label><input type = 'number' id = 'u'><br>
-          <label>V(Final Velocity)</label><input type = 'number' id = 'v'><br>
-          <label>A(Acceleration)</label><input type = 'number' id = 'a'><br>
-          <label>T(Time)</label><input type = 'number' id = 't'><br>
-          <button onclick='suvat()'>Solve</button>
-          <div class='output' id = 'suvat-output'></div>
+          <div class = 'content'>
+            <p>`v = u + at`</p>
+            <p>`s = ut + 1/2at^2`</p>
+            <p>`s = 1/2(u+v)t`</p>
+            <p>`v^2=u^2+2as`</p>
+            <p>`s=vt-1/2at^2`</p>
+            <label>S(Distance)</label><input type = 'number' id = 's'><br>
+            <label>U(Initial Velocity)</label><input type = 'number' id = 'u'><br>
+            <label>V(Final Velocity)</label><input type = 'number' id = 'v'><br>
+            <label>A(Acceleration)</label><input type = 'number' id = 'a'><br>
+            <label>T(Time)</label><input type = 'number' id = 't'><br>
+            <button onclick='suvat()'>Solve</button>
+            <div class='output' id = 'suvat-output'></div>
+          </div>
         </div>
       </li>
       -->
       <li>
-        <div class = 'header'>
-          <p id = 'title'>Gamma factor, relativity</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class = 'content'>
-          <p>`t=tau/(sqrt(1-v^2/c^2))=gammatau`</p>
-          <label>v<sub>1</sub>(m/s) =</label><input type = 'number' id = 'gammav'><br>
-          <button onclick='gamma()'>Calculate `gamma`</button>
-          <div class='output' id = 'gamma-output'></div>
-        </div>
-      </li>
-      <li>
-        <div class = 'header'>
-          <p id = 'title'>E = MC<sup>2</sup></p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class = 'content'>
-          <label>Mass =</label><input type = 'number' id = 'emcM'><br>
-          <label>Energy =</label><input type = 'number' id = 'emcE'><br>
-          <button onclick='emc()'>Calculate</button>
-          <div class='output' id = 'emc-output'></div>
+        <button class="accordion">Gamma Factor, Relativity</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id = 'title'>Gamma factor, relativity</p>
+          </div>
+          <div class = 'content'>
+            <p>`t=tau/(sqrt(1-v^2/c^2))=gammatau`</p>
+            <label>v<sub>1</sub>(m/s) =</label><input type = 'number' id = 'gammav'><br>
+            <button onclick='gamma()'>Calculate `gamma`</button>
+            <div class='output' id = 'gamma-output'></div>
+          </div>
         </div>
       </li>
       <li>
-        <div class = 'header'>
-          <p id = 'title'>Gravitational Acceleration</p>
-        </div>
-        <button class="accordion">Do Maths</button>
-        <div class = 'content'>
-          <p>`a=Gm/d^2`</p>
-          <label>Mass Of Planet =</label><input type = 'number' id = 'planM'><br>
-          <label>Radius Of Planet =</label><input type = 'number' id = 'planR'><br>
-          <label>Acceleration =</label><input type = 'number' id = 'planA'><br>
-          <button onclick='planet()'>Calculate</button>
-          <div class='output' id = 'plan-output'></div>
-        </div>
-      </li>
-      <li>
-        <div class = 'header'>
-          <p id = 'title'>Simple Derivitive/Integral</p>
-        </div>
-        <button class="accordion">Try It</button>
-        <div class = 'content'>
-          <p>`int(ax^b)dx=(ax^(b+1))/(b+1)`</p>
-          <p>`d/dx(ax^b)=abx^(b-1)`</p>
-          <label>a =</label><input type = 'number' id = 'divA'><br>
-          <label>b =</label><input type = 'number' id = 'divB'><br>
-          <button onclick='sInt()'>Integrate</button>
-          <button onclick='sDiv()'>Derive</button>
-          <div class='output' id = 'int-output'></div>
+        <button class="accordion">E = MC<sup>2</sup></button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id = 'title'>E = MC<sup>2</sup></p>
+          </div>
+          <div class = 'content'>
+            <label>Mass =</label><input type = 'number' id = 'emcM'><br>
+            <label>Energy =</label><input type = 'number' id = 'emcE'><br>
+            <button onclick='emc()'>Calculate</button>
+            <div class='output' id = 'emc-output'></div>
+          </div>
         </div>
       </li>
       <li>
-        <div class = 'header'>
-          <p id = 'title'>pH</p>
+        <button class="accordion">Gravitational Acceleration</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id = 'title'>Gravitational Acceleration</p>
+          </div>
+          <div class = 'content'>
+            <p>`a=Gm/d^2`</p>
+            <label>Mass Of Planet =</label><input type = 'number' id = 'planM'><br>
+            <label>Radius Of Planet =</label><input type = 'number' id = 'planR'><br>
+            <label>Acceleration =</label><input type = 'number' id = 'planA'><br>
+            <button onclick='planet()'>Calculate</button>
+            <div class='output' id = 'plan-output'></div>
+          </div>
         </div>
-        <button class="accordion">Try It</button>
-        <div class = 'content'>
-          <p>`pH=-log_10(H^+ )`</p>
-          <label>pH =</label><input type = 'number' id = 'ph'><br>
-          <label>H<sup>+</sup> concentration =</label><input type = 'number' id = 'h'><br>
-          <button style='margin-left: -145px;' onclick='pH()'>Calculate</button>
-          <div class='output' id = 'pH-output'></div>
+      </li>
+      <li>
+        <button class="accordion">Simple Derivitive/Integral</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id = 'title'>Simple Derivitive/Integral</p>
+          </div>
+          <div class = 'content'>
+            <p>`int(ax^b)dx=(ax^(b+1))/(b+1)`</p>
+            <p>`d/dx(ax^b)=abx^(b-1)`</p>
+            <label>a =</label><input type = 'number' id = 'divA'><br>
+            <label>b =</label><input type = 'number' id = 'divB'><br>
+            <button onclick='sInt()'>Integrate</button>
+            <button onclick='sDiv()'>Derive</button>
+            <div class='output' id = 'int-output'></div>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button class="accordion">pH</button>
+        <div class = 'panel'>
+          <div class = 'header'>
+            <p id = 'title'>pH</p>
+          </div>
+          <div class = 'content'>
+            <p>`pH=-log_10(H^+ )`</p>
+            <label>pH =</label><input type = 'number' id = 'ph'><br>
+            <label>H<sup>+</sup> concentration =</label><input type = 'number' id = 'h'><br>
+            <button style='margin-left: -145px;' onclick='pH()'>Calculate</button>
+            <div class='output' id = 'pH-output'></div>
+          </div>
         </div>
       </li>
     </ul>
