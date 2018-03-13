@@ -61,7 +61,6 @@ h1{
     cursor: pointer;
     padding: 5px;
     width: 10%;
-    height: 50px;
     font-size: 20px;
     margin-bottom: 5px;
     transition: 0.4s;
@@ -69,7 +68,7 @@ h1{
 .active, .accordion:hover {
     background-color: #c69797;
 }
-.content {
+.panel {
     padding: 0 18px;
     display: none;
     background-color: white;
