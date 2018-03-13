@@ -70,11 +70,11 @@ h1{
 }
 .panel {
     padding: 0 18px;
-    display: none;
     background-color: white;
     overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
 }
 body{
   background-color:#fffff
 }
-
