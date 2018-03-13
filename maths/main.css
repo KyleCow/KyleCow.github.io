@@ -65,7 +65,7 @@ h1{
     margin-bottom: 5px;
     transition: 0.4s;
 }
-.active, .accordion:hover {
+.accordion:hover {
     background-color: #c69797;
 }
 .panel {
@@ -77,3 +77,4 @@ h1{
 body{
   background-color:#fffff
 }
+
