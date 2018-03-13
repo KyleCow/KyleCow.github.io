@@ -79,6 +79,9 @@ body{
   background-color:#fffff
 }
 footer{
+  position: absolute;
+  margin-bottom: -2px;
+  width: 99%;
   text-align: center;
   font-family: 'Oswald', sans-serif;
 }
