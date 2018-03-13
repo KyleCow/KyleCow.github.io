@@ -78,3 +78,7 @@ h1{
 body{
   background-color:#fffff
 }
+footer{
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
