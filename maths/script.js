@@ -534,3 +534,16 @@ function sDiv(){
 
   document.getElementById('int-output').innerHTML = solution;
 }
+function pH(){
+  var ph = document.getElementById('ph').value;
+  var h = document.getElementById('h').value;
+  var solution;
+
+  if(noInput(ph)){
+    solution = 0-Math.log10(h)
+  } else if(noInput(h)){
+    solution = Math.pow(10,(0-ph))
+  }
+
+  document.getElementById('pH-output').innerHTML = solution;
+}
