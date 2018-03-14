@@ -60,7 +60,7 @@ h1{
     background-color: #e9c0c0;
     cursor: pointer;
     padding: 5px;
-    width: 10%;
+    width: 20%;
     font-size: 20px;
     margin-bottom: 5px;
     transition: 0.4s;
@@ -69,7 +69,7 @@ h1{
     background-color: #c69797;
 }
 .panel {
-    padding: 0 18px;
+    padding: 1 18px;
     background-color: white;
     overflow: hidden;
     max-height: 0;
@@ -79,7 +79,7 @@ body{
   background-color:#fffff
 }
 footer{
-  position: absolute;
+  bottom:0;
   margin-bottom: -2px;
   width: 99%;
   text-align: center;
