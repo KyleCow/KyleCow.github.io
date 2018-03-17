@@ -400,56 +400,35 @@ function suvat(){
   var v = document.getElementById('v').value;
   var a = document.getElementById('a').value;
   var t = document.getElementById('t').value;
-
   if(noInput(s)){
     if(noInput(u)){
-
     } else if(noInput(v)){
-
     } else if(noInput(a)){
-
     } else if(noInput(t)){
-
     }
   } else if(noInput(u)){
     if(noInput(s)){
-
     } else if(noInput(v)){
-
     } else if(noInput(a)){
-
     } else if(noInput(t)){
-
     }
   } else if(noInput(v)){
     if(noInput(s)){
-
     } else if(noInput(u)){
-
     } else if(noInput(a)){
-
     } else if(noInput(t)){
-
     }
   } else if(noInput(a)){
     if(noInput(s)){
-
     } else if(noInput(u)){
-
     } else if(noInput(v)){
-
     } else if(noInput(t)){
-
     }
   } else if(noInput(t)){
     if(noInput(s)){
-
     } else if(noInput(u)){
-
     } else if(noInput(v)){
-
     } else if(noInput(a)){
-
     }
   }
   */
@@ -546,4 +525,20 @@ function pH(){
   }
 
   document.getElementById('pH-output').innerHTML = solution;
+}
+function blackhole(){
+  var p = document.getElementById('ρ').value;
+  var r = document.getElementById('sR').value;
+  var solution;
+  var g = 6.67408 * Math.pow(10,-11);
+  var c = 299792458;
+  var pi = 3.141592653535897932384626
+
+  if(noInput(sR)){
+    solution = c/(Math.sqrt((8/3)*g*p*pi))
+  } else if(noInput(h)){
+    solution = (c*c)/((8/3)*g*pi*sR*sR)
+  }
+
+  document.getElementById('black-output').innerHTML = solution;
 }
