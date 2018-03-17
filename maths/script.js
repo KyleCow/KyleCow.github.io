@@ -534,10 +534,10 @@ function blackHole(){
   var c = 299792458;
   var pi = 3.141592653535897932384626
 
-  if(noInput(sR)){
+  if(noInput(r)){
     solution = c/(Math.sqrt((8/3)*g*p*pi))
-  } else if(noInput(h)){
-    solution = (c*c)/((8/3)*g*pi*sR*sR)
+  } else if(noInput(p)){
+    solution = (c*c)/((8/3)*g*pi*(r*r))
   }
 
   document.getElementById('black-output').innerHTML = solution;
