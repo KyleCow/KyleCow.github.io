@@ -526,7 +526,7 @@ function pH(){
 
   document.getElementById('pH-output').innerHTML = solution;
 }
-function blackhole(){
+function blackHole(){
   var p = document.getElementById('ρ').value;
   var r = document.getElementById('sR').value;
   var solution;
