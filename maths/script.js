@@ -171,7 +171,7 @@ function polygonSum(){
 function polygonEx(){
     var solution;
     sides = document.getElementById('sides').value;
-    solution = 360/(((sides - 2) * 180)/sides);
+    solution = 180-(((sides - 2) * 180)/sides)
     if(noInput(sides)){
         document.getElementById('poly-output').innerHTML = 'An Error Occured';
     }
