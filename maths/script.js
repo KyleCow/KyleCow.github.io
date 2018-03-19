@@ -542,3 +542,27 @@ function blackHole(){
 
   document.getElementById('black-output').innerHTML = solution;
 }
+function trajectoryDis(){
+  var t = document.getElementById('tAng').value;
+  var v = document.getElementById('tV').value;
+  var solution;
+  var g = 9.807;
+
+  t = (Math.PI/180)*t;
+
+  solution = (2*(v*v)*Math.sin(t)*Math.cos(t))/g;
+
+  document.getElementById('traj-output').innerHTML = solution;
+}
+function trajectoryEqn(){
+  var t = document.getElementById('tAng').value;
+  var v = document.getElementById('tV').value;
+  var solution;
+  var g = 9.807;
+
+  t = (Math.PI/180)*t;
+
+  solution = Math.tan(t)+'x'+(-g/(2*(v*v)*(Math.cos(t)*Math.cos(t))))+'x^2';
+
+  document.getElementById('traj-output').innerHTML = solution;
+}
