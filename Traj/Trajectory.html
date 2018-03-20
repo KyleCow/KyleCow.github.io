@@ -1,0 +1,78 @@
+<DOCTYPEhtml>
+<html>
+  <head>
+    <style>
+      h1{
+        text-align: center;
+      }
+      #eqn{
+        margin-top: 10px;
+        text-align: center;
+      }
+      p{
+        text-align: center;
+      }
+      img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 200px;
+      }
+    </style>
+    <title>Trajectories</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  </head>
+
+  <body>
+    <h1>Trajectory Equasion</h1>
+    <p id = 'eqn'> `t(x)=tan(theta)x-(gx^2)/(2v^2(cos(theta)^2))`</p>
+    <p>Start with finding the distance<br>
+      The object starts with an angle `theta` and velocity `v`<br>
+      The velocity can be split into two components horizontal(`v_h`) and vertical(`v_u`)<br></p>
+    <img src = 'assets/triange.png'/><br>
+    <p>This shows that `v_h=vcos(theta)` and `v_u=vsin(theta)`, this will be useful later<br></p>
+    <img src = 'assets/parablo.png'/><br>
+    <p>We can find this distance `d` because at the turning point `v_u=0`<br>
+      so it takes a time of `v_u/g`, `g` being gravitational acceleration, for it to reach this point<br>
+      since its traveling to the right at a speed of `v_h` and `d=st` we can express the distance `d` as `(v_uv_h)/g`<br>
+      and this can be expressed in terms of `v` as `(v^2sin(theta)cos(theta))/g`<br>
+      this is only half of the full distance however, so the full distance is</p>
+    <p id = 'eqn'>`(2v^2sin(theta)cos(theta))/g`</p>
+    <p>Since it passes through the origin (0,0) the full equasion is going to be `ax^2 + bx`<br>
+      At 0 the gradient is going to be `theta`<br>
+      As the gradient of a quadratic can be expressed as `2ax+b`<br>
+      Since at this point `x=0` the gradient is just `2a*0+b` or just `b`<br>
+      You can convert between angles and gradients with the `tan` function</p>
+    <img src = 'assets/dydx.png'/><br>
+    <p>Since `tan(theta)=(opp)/(adj)` and gradient is `(Deltay)/(Deltax)`<br>
+      In this case `tan(theta)=(Deltay)/(Deltax)`<br>
+      So in the equasion `b=tan(theta)` thus it is `ax^2+tan(theta)x`<br>
+      Now we need to find a value for `a`<br>
+      When `ax^2+bx+c=0`, `x = (-b \pm \sqrt{b^2-4ac})/(2a)`<br>
+      And in our case x = 0 at 0 and `(2v^2sin(theta)cos(theta))/g`<br>
+      and `b = tan(theta)` so<br>
+      `x = (-tan(theta) \pm \sqrt{(tan(theta))^2-4ac})/(2a)`<br>
+      Meaning that<br>
+      `(2v^2sin(theta)cos(theta))/g = (-tan(theta) \pm \sqrt{(tan(theta))^2-4ac})/(2a)`<br>
+      Since `c = 0` due to the graph passing through the origin this can be simplified to<br></p>
+      <p id = 'eqn'>`(2v^2sin(theta)cos(theta))/g = (-tan(theta) \pm tan(theta))/(2a)`</p>
+      <p>Rearanging slightly we get</p>
+      <p id = 'eqn'>`a(4v^2sin(theta)cos(theta))/g =-tan(theta) \pm tan(theta)`</p>
+      <p>This can mean either</p>
+      <p id = 'eqn'>`a(4v^2sin(theta)cos(theta))/g = 0`<br>
+        thus a = 0 and we know it doesnt<br>
+        or<br>
+        `a(4v^2sin(theta)cos(theta))/g = -2tan(theta)`</p>
+      <p>Due to the fact that `tan(theta)=(sin(theta))/(cos(theta))`<br>
+        We can replace `tan(theta)` with `(sin(theta))/(cos(theta))`<br>
+        This will make simplifying easyer down the road<br>
+        With a bit of rearanging we get `((-sin(theta))/cos(theta))/((2v^2sin(theta)cos(theta))/g)`<br>
+        Since `(a/b)/(c/d) = (ad)/(bc)`<br>
+        This simplifys to `(-sin(theta)g)/(2cos(theta)v^2sin(theta)cos(theta))`<br>
+        the `sin(theta)`'s cancel out leaving us with</p>
+        <p id = 'eqn'>`a = -g/(2v^2(cos(theta)^2))`</p>
+        <p>This gives us a final equasion of</p>
+        <p id = 'eqn'>`t(x)=tan(theta)x-(gx^2)/(2v^2(cos(theta)^2))`</p>
+        <p style="font-size:small">I used `t(x)` because its <b>t</b>rajectory
+  </body>
+</html>
