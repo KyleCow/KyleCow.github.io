@@ -25,7 +25,7 @@
 
   <body>
     <h1>Trajectory Equasion</h1>
-    <p id = 'eqn'> `t(x)=tan(theta)x-(gx^2)/(2v^2cos^2(theta))`</p>
+    <p id = 'eqn'> `t(x)=tan(theta)x-(gx^2)/(2v^2(cos(theta)^2))`</p>
     <p>Start with finding the distance<br>
       The object starts with an angle `theta` and velocity `v`<br>
       The velocity can be split into two components horizontal(`v_h`) and vertical(`v_u`)<br></p>
@@ -60,7 +60,7 @@
       <p id = 'eqn'>`a(4v^2sin(theta)cos(theta))/g =-tan(theta) \pm tan(theta)`</p>
       <p>This can mean either</p>
       <p id = 'eqn'>`a(4v^2sin(theta)cos(theta))/g = 0`<br>
-        thus a = 0 and we know it doesnt because its parabolic not a straight line<br>
+        thus a = 0 and we know it doesnt<br>
         or<br>
         `a(4v^2sin(theta)cos(theta))/g = -2tan(theta)`</p>
       <p>Due to the fact that `tan(theta)=(sin(theta))/(cos(theta))`<br>
@@ -70,9 +70,19 @@
         Since `(a/b)/(c/d) = (ad)/(bc)`<br>
         This simplifys to `(-sin(theta)g)/(2cos(theta)v^2sin(theta)cos(theta))`<br>
         the `sin(theta)`'s cancel out leaving us with</p>
-        <p id = 'eqn'>`a = -g/(2v^2(cos(theta)^2))`</p>
-        <p>This gives us a final equasion of</p>
-        <p id = 'eqn'>`t(x)=tan(theta)x-(gx^2)/(2v^2cos^2(theta))`</p>
-        <p style="font-size:small">I used `t(x)` because its <b>t</b>rajectory
+      <p id = 'eqn'>`a = -g/(2v^2(cos(theta)^2))`</p>
+      <p>This gives us a final equasion of</p>
+      <p id = 'eqn'>`t(x)=tan(theta)x-(gx^2)/(2v^2(cos(theta)^2))`</p>
+      <p style="font-size:small">I used `t(x)` because its <b>t</b>rajectory</p>
+      <p>From this equasion you can calculate the maximum height<br>
+        To do this you can use the fact that the maximum point of a parabola is<br>
+        `((-b)/(2a),c-(b^2)/(4a))`<br>
+        since<br>
+        `a=-g/(2v^2cos^2theta)`and `b=tantheta`<br>
+        The coordinates are going to be<br>
+        `((-tantheta)/(2(-g/(2v^2cos))),-((tan^2theta)/(4(-g/(2v^2cos^2theta))))`<br>
+        You can rearange these to be<br>
+        `((v^2cos^2(theta)tan(theta))/g,(v^2tan^2(theta)cos^2(theta))/(2g))`<br>
+        so the maximum height is `(v^2tan^2(theta)cos^2(theta))/(2g)`
   </body>
 </html>
