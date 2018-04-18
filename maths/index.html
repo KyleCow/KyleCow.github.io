@@ -286,12 +286,44 @@
             <p id = 'title'>Trajectories</p>
           </div>
           <div class = 'content'>
-            <p>`t(x)=tan(theta)x-(gx^2)/(2v^2cos^2(theta))`</p>
+            <p>`t(x)=tan(theta)x-(gx^2)/(v^2(cos(theta))^2)`</p>
             <label>Angle</label><input type = 'number' id = 'tAng'><br>
             <label>Inital Velocity</label><input type = 'number' id = 'tV'><br>
             <button onclick='trajectoryDis()'>Distance</button>
             <button onclick='trajectoryEqn()'>Equasion</button>
             <div class = 'output' id = 'traj-output'></div>
+          </div>
+      </li>
+      <li>
+        <button class="accordion">Sine Rule</button>
+        <div class="panel">
+          <div class="header">
+            <p id = 'title'>Sine Rule</p>
+          </div>
+          <div class = 'content'>
+            <p>`a/sinA=b/sinB=c/sinC`</p>
+            <label>a=</label><input type = 'number' id = 'sina'><br>
+            <label>b=</label><input type = 'number' id = 'sinb'><br>
+            <label>A=</label><input type = 'number' id = 'sinA'><br>
+            <label>B=</label><input type = 'number' id = 'sinB'><br>
+            <button onclick='sinRule()'>Calculate</button>
+            <div class = 'output' id = 'sinR-output'></div>
+          </div>
+      </li>
+      <li>
+        <button class="accordion">Cosine Rule</button>
+        <div class="panel">
+          <div class="header">
+            <p id = 'title'>Cosine Rule</p>
+          </div>
+          <div class = 'content'>
+            <p>`a^2=b^2+c^2-2bc*cosA`</p>
+            <label>a=</label><input type = 'number' id = 'cosa'><br>
+            <label>b=</label><input type = 'number' id = 'cosb'><br>
+            <label>c=</label><input type = 'number' id = 'cosc'><br>
+            <label>A=</label><input type = 'number' id = 'cosA'><br>
+            <button onclick='cosRule()'>Calculate</button>
+            <div class = 'output' id = 'cosR-output'></div>
           </div>
       </li>
     </ul>
