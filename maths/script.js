@@ -566,3 +566,46 @@ function trajectoryEqn(){
 
   document.getElementById('traj-output').innerHTML = solution;
 }
+function sinRule(){
+  var a = document.getElementById('sina').value;
+  var b = document.getElementById('sinb').value;
+  var A = document.getElementById('sinA').value;
+  var B = document.getElementById('sinB').value;
+  var solution;
+
+  A = (Math.PI/180)*A;
+  B = (Math.PI/180)*B;
+
+  if (noInput(a)){
+    solution = (b*Math.sin(A))/(Math.sin(B));
+  } else if (noInput(b)){
+    solution = (a*Math.sin(B))/(Math.sin(A));
+  } else if (noInput(A)){
+    solution = Math.asin((a*Math.sin(B))/b);
+  } else if (noInput(B)){
+    solution = Math.asin((b*Math.sin(A))/a);
+  }
+
+  document.getElementById('sinR-output').innerHTML = solution;
+}
+function cosRule(){
+  var a = document.getElementById('cosa').value;
+  var b = document.getElementById('cosb').value;
+  var c = document.getElementById('cosc').value;
+  var A = document.getElementById('cosA').value;
+  var solution;
+
+  A = (Math.PI/180)*A;
+
+  if (noInput(a)){
+    solution = Math.sqrt((b*b)+(c*c)-(2*b*c*Math.cos(A)))
+  } else if (noInput(b)){
+    solution = c*Math.cos(A)+Math.sqrt((c*c)*(Math.cos(A)*Math.cos(A)-(a*a)-(c*c)))
+  } else if (noInput(c)){
+    solution = b*Math.cos(A)+Math.sqrt((b*b)*(Math.cos(A)*Math.cos(A)-(a*a)-(b*b)))
+  } else if (noInput(A)){
+    solution = Math.acos((((b*b)+(c*c)-(a*a))/(2*b*c)))*180/Math.PI
+  }
+
+  document.getElementById('cosR-output').innerHTML = solution;
+}
