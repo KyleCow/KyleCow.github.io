@@ -583,7 +583,7 @@ function sinRule(){
   } else if (noInput(A)){
     solution = Math.asin((a*Math.sin(B))/b);
   } else if (noInput(B)){
-    solution = Math.asin((b*Math.sin(A))/a);
+    solution = Math.asin((b*Math.sin(A))/a)*180/Math.PI;
   }
 
   document.getElementById('sinR-output').innerHTML = solution;
