@@ -4,14 +4,13 @@
     <title>Formulas|KyleCow.me</title>
     <link rel="stylesheet" type="text/css" href="abc/main.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script src="http://cdn.lambocreeper.uk/jquery.js"></script>
-    <script type="text/javascript" src="http://cdn.lambocreeper.uk/searchbox.js"></script>
+    <script type="text/javascript" src="	https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ext-searchbox.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald|Share+Tech+Mono" rel="stylesheet">
   </head>
   <body>
     <h1>Formulas</h1>
-    <input type="text" class="live-search-box" placeholder="Search For A Formula...">
-    <ul class="live-search-list container" style="list-style-type:none">
+    <input type="text" id="mySearch" onkeyup="search()" placeholder="Search For A Formula..." title="Type in a category">
+    <ul id="myMenu">
       <li>
         <button class="accordion">A * B = C</button>
         <div class = 'panel'>
@@ -36,16 +35,17 @@
             <p id='title'>The Pythagorean theorem</p>
           </div>
           <div class ='content'>
-            <p>Hypotenuse<sup>2</sup> = Side1<sup>2</sup> + Side2<sup>2</sup></p>
-            <p id = 'small'>(Leave the parameters that you want to solve for blank)</p>
-            <p id = 'small'>(The Hypotenuse must be the largest value)</p>
-            <label>Hypotenuse(cm) =</label><input type='number' id='hyp'><br>
-            <label>Side1(cm) =</label><input type='number' id='sd1'><br>
-            <label>Side2(cm) =</label><input type='number' id='sd2'><br>
-            <button onclick='pythagoras()'>Evaluate</button><br>
-            <div class='output' id='pyth-output'></div>
-          </div>
+              <p>Hypotenuse<sup>2</sup> = Side1<sup>2</sup> + Side2<sup>2</sup></p>
+              <p id = 'small'>(Leave the parameters that you want to solve for blank)</p>
+              <p id = 'small'>(The Hypotenuse must be the largest value)</p>
+              <label>Hypotenuse(cm) =</label><input type='number' id='hyp'><br>
+              <label>Side1(cm) =</label><input type='number' id='sd1'><br>
+              <label>Side2(cm) =</label><input type='number' id='sd2'><br>
+              <button onclick='pythagoras()'>Evaluate</button><br>
+              <div class='output' id='pyth-output'></div>
+            </div>
         </div>
+        <a id = 'meta'>The Pythagorean pythagoras Hypotenuse Side1 Side2</a>
       </li>
       <li>
         <button class="accordion">Linear Graphs</button>
@@ -63,10 +63,11 @@
             <button onclick='midpoint()'>Midpoint</button>
             <button onclick='gradient()'>Gradient</button>
             <button onclick='yIntercept()'>Y-Intercept</button>
-            <button onClick='LinEquasion()'>Equasion</button><br>
+            <button onClick='LinEquasion()'>Equation</button><br>
             <div class='output' id='linear-output'></div>
           </div>
         </div>
+        <a id = 'meta'>Coordinates Linear Graphs Line Length Midpoint Gradient Y-Intercept Equation</a>
       </li>
       <li>
         <button class="accordion">Angles In Polygon</button>
@@ -83,7 +84,8 @@
             <button onclick='polygonExSum()'>Sum Of Ext Angles</button>
             <div class='output' id = 'poly-output'></div>
           </div>
-        </div>
+          </div>
+        <a id = 'meta'>Angles In Polygon Sides Sum Of Inerior Angles Sum Of Exterior Angles</a>
       </li>
       <li>
         <button class="accordion">Circles</button>
@@ -97,7 +99,8 @@
             <button onclick='circleCirc()'>Circumferance</button>
             <div class='output' id = circleA-output></div>
           </div>
-      </div>
+        </div>
+        <a id = 'meta'>Circles Radius Area Circumferance</a>
       </li>
       <li>
         <button class="accordion">Quadratics</button>
@@ -115,6 +118,7 @@
             <div class='output' id = 'quad-output'></div>
           </div>
         </div>
+        <a id = 'meta'> Quadratics Quadratic equation x</a>
       </li>
       <li>
         <button class="accordion">Gravity</button>
@@ -131,6 +135,7 @@
             <div class='output' id = 'grav-output'></div>
           </div>
         </div>
+        <a id = 'meta'>Gravity Distance Mass</a>
       </li>
       <li>
         <button class="accordion">Radiation Half Life</button>
@@ -148,6 +153,7 @@
             <div class='output' id = 'hl-output'></div>
           </div>
         </div>
+        <a id = 'meta'>Radiation Half Life Binary Decay</a>
       </li>
       <li>
         <button class="accordion">Relative Motion</button>
@@ -164,29 +170,32 @@
             <div class='output' id = 'rel-output'></div>
           </div>
         </div>
+        <a id = 'meta'>Relative Relative Motion Speed Velocity</a>
       </li>
       <!--
       <li>
-      <button class="accordion">SUVAT</button>
-      <div class = 'panel'>
-        <div class = 'header'>
-          <p id = 'title'>Isaac Newton (SUVAT)</p>
-        </div>
-          <div class = 'content'>
-            <p>`v = u + at`</p>
-            <p>`s = ut + 1/2at^2`</p>
-            <p>`s = 1/2(u+v)t`</p>
-            <p>`v^2=u^2+2as`</p>
-            <p>`s=vt-1/2at^2`</p>
-            <label>S(Distance)</label><input type = 'number' id = 's'><br>
-            <label>U(Initial Velocity)</label><input type = 'number' id = 'u'><br>
-            <label>V(Final Velocity)</label><input type = 'number' id = 'v'><br>
-            <label>A(Acceleration)</label><input type = 'number' id = 'a'><br>
-            <label>T(Time)</label><input type = 'number' id = 't'><br>
-            <button onclick='suvat()'>Solve</button>
-            <div class='output' id = 'suvat-output'></div>
-          </div>
-        </div>
+        <a>
+          <button class="accordion">SUVAT</button>
+          <div class = 'panel'>
+            <div class = 'header'>
+              <p id = 'title'>Isaac Newton (SUVAT)</p>
+            </div>
+              <div class = 'content'>
+                <p>`v = u + at`</p>
+                <p>`s = ut + 1/2at^2`</p>
+                <p>`s = 1/2(u+v)t`</p>
+                <p>`v^2=u^2+2as`</p>
+                <p>`s=vt-1/2at^2`</p>
+                <label>S(Distance)</label><input type = 'number' id = 's'><br>
+                <label>U(Initial Velocity)</label><input type = 'number' id = 'u'><br>
+                <label>V(Final Velocity)</label><input type = 'number' id = 'v'><br>
+                <label>A(Acceleration)</label><input type = 'number' id = 'a'><br>
+                <label>T(Time)</label><input type = 'number' id = 't'><br>
+                <button onclick='suvat()'>Solve</button>
+                <div class='output' id = 'suvat-output'></div>
+              </div>
+            </div>
+        </a>
       </li>
       -->
       <li>
@@ -202,6 +211,7 @@
             <div class='output' id = 'gamma-output'></div>
           </div>
         </div>
+        <a id = 'meta'>Gamma factor, relativity tau</a>
       </li>
       <li>
         <button class="accordion">E = MC<sup>2</sup></button>
@@ -216,6 +226,7 @@
             <div class='output' id = 'emc-output'></div>
           </div>
         </div>
+        <a id = 'meta'>E = MC2 Einstein equation relativity</a>
       </li>
       <li>
         <button class="accordion">Gravitational Acceleration</button>
@@ -232,6 +243,7 @@
             <div class='output' id = 'plan-output'></div>
           </div>
         </div>
+        <a id = 'meta'>Gravitational Acceleration Gravity Planet Earth Mass</a>
       </li>
       <li>
         <button class="accordion">Simple Derivitive/Integral</button>
@@ -249,6 +261,7 @@
             <div class='output' id = 'int-output'></div>
           </div>
         </div>
+        <a id = 'meta'>Simple Derivitive/Integral calculus Gradient area curve area under curve</a>
       </li>
       <li>
         <button class="accordion">pH</button>
@@ -264,6 +277,7 @@
             <div class='output' id = 'pH-output'></div>
           </div>
         </div>
+        <a id = 'meta'>pH acidic alkaline neutral</a>
       </li>
       <li>
         <button class="accordion">Event Horizon (Black Hole)</button>
@@ -278,6 +292,7 @@
             <button style='margin-left: -175px;' onclick='blackHole()'>Calculate</button>
             <div class='output' id = 'black-output'></div>
           </div>
+          <a id = 'meta'>Event Horizon Black Hole Schwarzschild Radius </a>
       </li>
       <li>
         <button class="accordion">Trajectories</button>
@@ -285,14 +300,16 @@
           <div class="header">
             <p id = 'title'>Trajectories</p>
           </div>
-          <div class = 'content'>
-            <p>`t(x)=tan(theta)x-(gx^2)/(v^2(cos(theta))^2)`</p>
-            <label>Angle</label><input type = 'number' id = 'tAng'><br>
-            <label>Inital Velocity</label><input type = 'number' id = 'tV'><br>
-            <button onclick='trajectoryDis()'>Distance</button>
-            <button onclick='trajectoryEqn()'>Equasion</button>
-            <div class = 'output' id = 'traj-output'></div>
+            <div class = 'content'>
+              <p>`t(x)=tan(theta)x-(gx^2)/(v^2(cos(theta))^2)`</p>
+              <label>Angle</label><input type = 'number' id = 'tAng'><br>
+              <label>Inital Velocity</label><input type = 'number' id = 'tV'><br>
+              <button onclick='trajectoryDis()'>Distance</button>
+              <button onclick='trajectoryEqn()'>Equasion</button>
+              <div class = 'output' id = 'traj-output'></div>
           </div>
+        </div>
+        <a id = 'meta'>Trajectories Parabola thrown object gravity</a>
       </li>
       <li>
         <button class="accordion">Sine Rule</button>
@@ -309,6 +326,8 @@
             <button onclick='sinRule()'>Calculate</button>
             <div class = 'output' id = 'sinR-output'></div>
           </div>
+        </div>
+        <a id = 'meta'>Sine Rule triganometry</a>
       </li>
       <li>
         <button class="accordion">Cosine Rule</button>
@@ -325,6 +344,8 @@
             <button onclick='cosRule()'>Calculate</button>
             <div class = 'output' id = 'cosR-output'></div>
           </div>
+        </div>
+        <a id = 'meta'>cosine Rule triganometry</a>
       </li>
     </ul>
     <script src="script.js"></script>
