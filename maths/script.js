@@ -1,6 +1,22 @@
 var acc = document.getElementsByClassName("accordion");
 var i;
 
+function search() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+      } else {
+          li[i].style.display = "none";
+      }
+  }
+}
+
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
@@ -583,7 +599,7 @@ function sinRule(){
   } else if (noInput(A)){
     solution = Math.asin((a*Math.sin(B))/b);
   } else if (noInput(B)){
-    solution = Math.asin((b*Math.sin(A))/a)*180/Math.PI;
+    solution = Math.asin((b*Math.sin(A))/a);
   }
 
   document.getElementById('sinR-output').innerHTML = solution;
