@@ -1,0 +1,30 @@
+<!DOCTYPEhtml>
+<html>
+  <head>
+    <title>Counter</title>
+    <style>
+      #num{
+        font-size: 100px;
+        font-family: 'Chakra Petch', sans-serif;
+        text-align: center;
+        padding: 30vh;
+      }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+  </head>
+  <body onclick= "add()">
+    <div  style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"
+     unselectable="on"
+     onselectstart="return false;"
+     onmousedown="return false;" id = "num"></div>
+    <script>
+      num = 0
+      document.getElementById('num').innerHTML = num
+      function add(){
+        num = num + 1;
+        nums = String(num)
+        document.getElementById('num').innerHTML = nums;
+      }
+    </script>
+  </body>
+</html>
