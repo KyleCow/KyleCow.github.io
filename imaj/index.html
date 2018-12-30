@@ -1,0 +1,85 @@
+<DOCTYPEhtml>
+<html>
+    <head>
+        <style>
+        body{
+            text-align: center;
+            font-size: 20px
+        }
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+        </style>
+        <title>Imaginary Proof</title>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </head>
+    <body>
+        <hr>
+        <h1>`(a+bi)^(c+di)`</h1>
+        <hr>
+        <p>
+            Given that `e^(ln(x))=x`<br>
+            We can set `(a+bi)^(c+di)` as x<br>
+            And since in logs we can take powers to the outside it becomes<br>
+            `e^((c+di)*ln(a+bi))`<br>
+            Now we need to find what `ln(a+bi)` is
+        </p>
+        <hr>
+        <h2>`ln(a+bi)`</h2>
+        <hr>
+        <p>
+            Since all complex numbers are points on a plane<br>
+            They can be expressed in a polar form (angle and magnitude)<br>
+            These values are shown in the equation<br>
+            `me^(itheta)`<br>
+            Which can also be expressed as<br>
+            `e^(ln(m)+itheta)`<br>
+            The magnitude can simply be calculated using the pythagorean theorum `a^2+b^2=c^2`<br>
+            With the magnitude being the hypotenuse length it can be expressed as `sqrt(a^2+b^2)`<br>
+            The angle can also be calculated by using the `tan` ratio<br>
+            `tantheta=(opp)/(adj)`<br>
+            and since `a` is adjacent and `b` is opposite<br>
+            the angle is `tan^(-1)(b/a)`<br>
+        </p>
+        <img src="assets/A+Bi.png"/>
+        <p>
+            Now we know the angle and the magnitude so we know that the point in polar form is<br>
+            `e^(ln(sqrt(a^2+b^2))+itan^(-1)(b/a))`<br>
+            so<br>
+            `ln(a+bi)=ln(sqrt(a^2+b^2))+itan^(-1)(b/a)`<br>
+            and `ln(sqrt(a^2+b^2))=ln((a^2+b^2)^(1/2))=1/2*ln(a^2+b^2)`<br>
+            so `ln(a+bi)=1/2ln(a^2+b^2)+itan^(-1)(b/a)`
+        </p>
+        <hr>
+        <h2>`e^((c+di)(1/2ln(a^2+b^2)+itan^(-1)(b/a)))`</h2>
+        <hr>
+        <p>
+            If we expand the bracket keeping in mind that `i^2=-1`<br>
+            `(c+di)(1/2ln(a^2+b^2)+itan^(-1)(b/a))`<br>
+            becomes<br>
+            `c/2ln(a^2+b^2)+d/2ln(a^2+b^2)i+ctan^-1(b/a)i-dtan^-1(b/a)`<br>
+            Which can be expressed as<br>
+            `(c/2ln(a^2+b^2)-dtan^-1(b/a))+i(d/2ln(a^2+b^2)+ctan^-1(b/a))`<br>
+            since we need to raise e to the power of this we get<br>
+            `e^((c/2ln(a^2+b^2)-dtan^-1(b/a))+i(d/2ln(a^2+b^2)+ctan^-1(b/a)))`<br>
+            or<br>
+            `e^(c/2ln(a^2+b^2)-dtan^-1(b/a))*e^(i(d/2ln(a^2+b^2)+ctan^-1(b/a)))`<br>
+            To make things clearer we will set<br>
+            `theta = d/2ln(a^2+b^2)+ctan^-1(b/a)`<br>
+            `omega = c/2ln(a^2+b^2)-dtan^-1(b/a)`<br>
+            so we now have `(a+bi)^(c+di)=e^omega*e^(itheta)`<br>
+            Since according to Eulers identity `e^(itheta)=costheta+isintheta`<br>
+            This can be written as `e^omega(costheta+isintheta)`<br>
+            Expressed fully it's<br>
+            `(a+bi)^(c+di)=e^(c/2ln(a^2+b^2)-dtan^-1(b/a))cos(d/2ln(a^2+b^2)+ctan^-1(b/a))+e^(c/2ln(a^2+b^2)-dtan^-1(b/a))sin(d/2ln(a^2+b^2)+ctan^-1(b/a))i`<br> <br>
+            or<br> <br>
+            `(a+bi)^(c+di)=e^omega(costheta+isin(theta))`<br>
+            when<br>
+            `theta = d/2ln(a^2+b^2)+ctan^-1(b/a)`<br>
+            `omega = c/2ln(a^2+b^2)-dtan^-1(b/a)`<br>
+        </p>
+    </body>
+</html>
