@@ -1,6 +1,6 @@
 #t{
   font-size: 20vh;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   text-align: center;
   padding-top: 30vh;
   margin: auto;
@@ -8,8 +8,9 @@
 
 #m{
   font-size: 5vh;
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: 'Anonymous Pro', monospace;
   color: rgb(186, 186, 186);
   text-align: center;
   margin: auto;
 }
+
