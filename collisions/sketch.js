@@ -3,8 +3,8 @@ let y1 = 200;
 let x2 = 600;
 let y2 = 200;
 
-let m1 = 10000;
-let m2 = 1;
+let m1;
+let m2;
 
 let v1 = 1;
 let v2 = 0;
@@ -17,6 +17,8 @@ let hit = 0;
 let n;
 
 let slider;
+let mass1;
+let mass2;
 
 function setup(){
 
