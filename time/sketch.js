@@ -12,5 +12,6 @@ setInterval(function(){
         mil = ('00' + mill).slice(-3);
         document.getElementById("t").innerHTML = time;
         document.getElementById("m").innerHTML = mil;
+        document.title = time + '|KyleCow.me';
      }
 },1);
