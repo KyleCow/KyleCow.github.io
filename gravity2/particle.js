@@ -10,7 +10,7 @@ function Particle(){
     	ellipse(this.x, this.y, this.diameter, this.diameter);
   	};
 	this.fall = function(){
-		if(this.y + this.diameter <= 600){
+		if(this.y + this.diameter <= 590){
 			this.v += this.g;
 			this.y += this.v;
 		} else {
