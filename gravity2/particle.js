@@ -10,12 +10,14 @@ function Particle(){
     	ellipse(this.x, this.y, this.diameter, this.diameter);
   	};
 	this.fall = function(){
-		if(this.y + this.diameter <= 590){
+		if(this.y + this.diameter < 600){
 			this.v += this.g;
 			this.y += this.v;
-		} else {
-			this.g = 0;
+		} else if (this.y + this.diameter > 600) {
+            this.y = 600 - this.diameter;
+            this.g = 0;
             this.v = 0;
 		}
 	}
 }
+
