@@ -1,0 +1,23 @@
+#q{
+  font-size: 9vh;
+  font-family: 'Anonymous Pro', monospace;
+  text-align: center;
+  padding-top: 30vh;
+  margin: auto;
+}
+
+#a{
+  margin-top: 2vh;
+  font-family: 'Anonymous Pro', monospace;
+  width:100%;
+  height: 7vh;
+  text-align: center;
+  font-size: 5vh;
+  float: none;
+  color: rgb(190,190,190);
+  border-width: medium;
+}
+
+#s{
+  visibility: hidden;
+}
