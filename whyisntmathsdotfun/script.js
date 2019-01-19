@@ -4,6 +4,7 @@ let n1;
 let n2;
 let q;
 let c;
+let d = 1;
 
 
 
@@ -21,11 +22,9 @@ function onClick(){
   setTimeout(function(){document.getElementById('q').innerHTML = q;
   }, 300);
 
-  a
-
   v = Math.floor(Math.random() * Math.floor(3));
-  n1 = Math.floor(Math.random() * Math.floor(9));
-  n2 = Math.floor(Math.random() * Math.floor(9));
+  n1 = Math.floor(Math.random() * Math.floor((10**d)-1));
+  n2 = Math.floor(Math.random() * Math.floor((10**d)-1));
 
 
   if(v == 0){
@@ -48,6 +47,16 @@ function onStart(){
   c = '';
 }
 
+
+function diffUp(){
+    d += 1;
+}
+
+function diffDwn(){
+    if(d > 1){
+        d -= 1;
+    }
+}
 
 document.getElementById('a').addEventListener("keyup", function(event) {
     event.preventDefault();
