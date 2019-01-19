@@ -21,3 +21,11 @@
 #s{
   visibility: hidden;
 }
+
+#d{
+    border-width: medium;
+    font-size: 2vh;
+    text-align:center;
+    font-family: 'Varela Round', sans-serif;
+    width: 48%;
+}
