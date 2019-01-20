@@ -1,3 +1,6 @@
+//This is also up on my website www.kylecow.me/collisions but it's often not up so ill put the thing here
+
+
 let x1 = 1200;
 let y1 = 200;
 let x2 = 600;
@@ -23,6 +26,7 @@ let mass2;
 function setup(){
 
     createCanvas(1300,600);
+	frameRate(6000);
     slider = createSlider(0.5, 100, 1);
     slider.position(1150, 10);
     slider.style('width', '140px');
@@ -39,8 +43,8 @@ function setup(){
 
 
 function draw(){
-    m1 = 10**mass1.value();
-    m2 = 10**mass2.value();
+    m1 = Math.floor(10**mass1.value());
+    m2 = Math.floor(10**mass2.value());
     n = slider.value();
     y1 = 600/2 - 50*Math.log10(m1+1)
     y2 = 600/2 - 50*Math.log10(m2+1)
