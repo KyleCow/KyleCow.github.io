@@ -15,14 +15,18 @@ function setup() {
 	background(0);
 	
 	
-	rate = createSlider(0, 4, 1, 0.1);
+	rate = createSlider(1, 100, 1, 0.1);
 	rate.position(10, 20);
 	rate.style('width', '140px');
 }
 
 function draw() {
+	textSize(20);
+	strokeWeight(4);
+	stroke(0);
+	fill(255);
 	r = Math.floor(rate.value());
-	text('Rate',50,30);
+	text('Rate',70,55);
 	for(var i = 0; i < r; i++){
 		x = random(width);
 		y = random(height);
