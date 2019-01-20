@@ -14,7 +14,7 @@ var r;
 var rate;
 
 function setup() {
-	createCanvas(displayWidth, displayHeight);
+	createCanvas(windowWidth, windowHeight);
 	background(0);
 	
 	
