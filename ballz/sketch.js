@@ -10,8 +10,6 @@ var linec2;
 var linec3;
 var linew;
 
-var r;
-var rate;
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
