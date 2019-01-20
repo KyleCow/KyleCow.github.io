@@ -1,14 +1,17 @@
-var x = random(width);
-var y = random(height);
-var w = random(2,42);
-var h = random(2, 42);
-var c1 = random(0,255);
-var c2 = random(0,255);
-var c3 = random(0,255);
-var linec1 = random(0,255);
-var linec2 = random(0,255);
-var linec3 = random(0,255);
-var linew = random(2, 13);
+var x;
+var y;
+var w;
+var h;
+var c1;
+var c2;
+var c3;
+var linec1;
+var linec2;
+var linec3;
+var linew;
+
+var r;
+var rate;
 
 function setup() {
 	createCanvas(displayWidth, displayHeight)
