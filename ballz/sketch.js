@@ -13,10 +13,16 @@ var linew = random(2, 13);
 function setup() {
 	createCanvas(displayWidth, displayHeight)
 	background(0);
+	
+	
+	    rate = createSlider(0, 4, 1, 0.1);
+	    rate.position(1000, 580);
+	    rate.style('width', '140px');
 }
 
 function draw() {
-	for(var i = 0; i < 100; i++){
+	r = Math.floor(rate.value());
+	for(var i = 0; i < r; i++){
 		x = random(width);
 		y = random(height);
 		w = random(2,42)
