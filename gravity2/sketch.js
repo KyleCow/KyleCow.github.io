@@ -1,18 +1,32 @@
+let ball = []
+let amt = 1000;
+
+
 function setup() {
+	slider = createSlider(0,3,2,0.1);
 	createCanvas(600, 600);
 	background(0);
-    ball = new Particle();
+    for(let i = 0; i < amt; i++){	
+		ball[i] = new Particle();
+	}
 }
 
 function draw() {
+	amt = 10**slider.value();
 	background(0);
     text('Click to bounce',10,20);
-	ball.fall();
-    ball.display();
+	for(let i = 0; i < amt; i++){	
+    	ball[i].display();
+		ball[i].fall();
+		ball[i].move()
+	}
 }
 
 function mousePressed(){
-    ball.v = -10;
-    ball.y -= 5;
-    ball.g = 1;
+    for(let i = 0; i < amt; i++){	
+		ball[i].v = -random(5,15);
+    	ball[i].y -= 5;
+    	ball[i].g = 1;
+		ball[i].vx = random(ball[i].vx,5);
+	}
 }
