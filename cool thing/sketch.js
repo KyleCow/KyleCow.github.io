@@ -3,7 +3,7 @@ let amt = 500;
 
 
 function setup() {
-	createCanvas(600, 600);
+	createCanvas(window.screen.width, window.screen.height);
 	background(0);
    	for(let i = 0; i < amt; i++){	
 		ball[i] = new Particle();
