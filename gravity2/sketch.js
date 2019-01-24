@@ -4,6 +4,7 @@ let amt = 1000;
 
 function setup() {
 	slider = createSlider(0,3,2,0.1);
+	slider.position(0, 20);
 	createCanvas(600, 600);
 	background(0);
     for(let i = 0; i < amt; i++){	
