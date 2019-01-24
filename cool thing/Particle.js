@@ -9,7 +9,7 @@ function Particle() {
 		ellipse(this.x, this.y, this.diameter, this.diameter);
 	};
 	this.move = function(){
-		if(this.x > 600 + this.diameter){
+		if(this.x > width + this.diameter){
 			this.x = 0 - this.diameter;
 		}
 		this.x += this.v;
