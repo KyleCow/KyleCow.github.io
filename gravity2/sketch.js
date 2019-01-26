@@ -25,7 +25,7 @@ function draw() {
 
 function mousePressed(){
     for(let i = 0; i < amt; i++){	
-		ball[i].v = -random(5,15);
+		ball[i].v = -random(5,30);
     	ball[i].y -= 5;
     	ball[i].g = 1;
 		ball[i].vx = random(ball[i].vx,5);
