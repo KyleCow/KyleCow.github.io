@@ -7,6 +7,8 @@ function Particle() {
 	this.g = 1;
 	this.v = 0;
 	this.vx = random(1,3);
+	this.rest = random(0.7,0.9);
+	this.jump = random(-5,-30);
 	this.display = function() {
 		ellipse(this.x, this.y, this.diameter, this.diameter);
 	};
@@ -16,11 +18,12 @@ function Particle() {
 			this.y += this.v;
 		} else if (this.y + this.diameter > 600) {
 			if(abs(this.v) > 4.5){
-				this.v = -this.v * random(0.7,0.9);
-				this.vx =this.vx * random(0.7,0.9);
-				this.y = 600 - this.diameter-4;
+				this.v = -this.v * this.rest;
+				this.vx =this.vx * this.rest;
+				this.y = 600 - this.diameter-1;
 			} else {
 				this.v = 0;
+				this.y = 600 - this.diameter;
 			}
 			//this.g = 0;
 		} else if (this.y - this.diameter < 0) {
