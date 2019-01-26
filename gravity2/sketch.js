@@ -15,7 +15,7 @@ function setup() {
 function draw() {
 	amt = 10**slider.value();
 	background(0);
-    text('Click to bounce',10,20);
+    	text('Click to bounce',10,25);
 	for(let i = 0; i < amt; i++){	
     	ball[i].display();
 		ball[i].fall();
