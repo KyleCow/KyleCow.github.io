@@ -16,8 +16,8 @@ function Particle() {
 			this.y += this.v;
 		} else if (this.y + this.diameter > 600) {
 			if(abs(this.v) > 4.5){
-				this.v = -this.v * 0.8;
-				this.vx =this.vx * 0.8;
+				this.v = -this.v * random(0.7,0.9);
+				this.vx =this.vx * random(0.7,0.9);
 				this.y = 600 - this.diameter-4;
 			} else {
 				this.v = 0;
