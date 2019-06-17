@@ -4,10 +4,16 @@ iframe{
 
 body{
   background-color: #e7c3a5;
+  margin-bottom:50px;
 }
-footer{
-  text-align: center;
-  font-family: 'VT323', monospace;
+footer {
+    position: fixed;
+    height: 50px;
+    background-color: red;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }
 h1{
   font-family: monospace;
