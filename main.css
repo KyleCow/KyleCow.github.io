@@ -9,11 +9,12 @@ body{
 footer {
     position: fixed;
     height: 50px;
-    background-color: red;
     bottom: 0px;
     left: 0px;
     right: 0px;
+    text-allign: center;
     margin-bottom: 0px;
+    font-family: 'VT323', monospace;
 }
 h1{
   font-family: monospace;
