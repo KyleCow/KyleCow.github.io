@@ -70,7 +70,7 @@ function draw(){
     text('Mass = '+m2, x2, y2-10);
     line(10, 0, 10, 1200);
 	for(let i = 0; i < time; i++){
-		if (abs(x1-x2)-(100*Math.log10(m2+1))<= 0){
+		if (abs(x1-x2)-(10*Math.pow(m2, (1/3)))<= 0){
 			v2o = (2*m1*v1/(m1+m2))-(v2*(m1-m2)/(m1+m2));
 			v1o = ((m1-m2)*v1/(m1+m2))+(2*m2*v2/(m1+m2));
 			hit += 1;
