@@ -1,6 +1,3 @@
-//This is also up on my website www.kylecow.me/collisions but it's often not up so ill put the thing here
-
-
 let x1 = 1200;
 let y1 = 200;
 let x2 = 600;
