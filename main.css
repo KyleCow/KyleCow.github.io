@@ -99,3 +99,9 @@ footer{
 #side{
   width:100px
 }
+#link{
+  font-size: 19px;
+  font-family: monospace;
+  color: #5e4a0d;
+  font-family: 'VT323', monospace;
+}
