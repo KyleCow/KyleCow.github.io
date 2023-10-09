@@ -1,0 +1,108 @@
+iframe{
+  border:0ch
+}
+
+body{
+  background-color: #e7c3a5;
+  margin-bottom:50px;
+}
+#footer {
+    width:100%;
+    position: fixed;
+    height: 30px;
+    bottom: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: #5e4a0d;
+    font-family: 'VT323', monospace;
+}
+h1{
+  font-family: monospace;
+  color: #5e4a0d;
+  text-align: center;
+  font-family: 'VT323', monospace;
+}
+h2{
+  font-size: 19px;
+  font-family: monospace;
+  color: #5e4a0d;
+  font-family: 'VT323', monospace;
+}
+p{
+  font-family: verdana;
+  font-size: 20px;
+  color: #b87c49;
+  text-align: center;
+  font-family: 'VT323', monospace;
+}
+#m:link, #m:visited{
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'VT323', monospace;
+}
+#m:hover, #m:active{
+  background-color: red;
+  height: 20px;
+  font-size:110%;
+  margin-top: -20px;
+}
+
+#side:link{
+  height: 20px;
+  font-size:100%;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'VT323', monospace;
+}
+#side:visited{
+  background-color: rgb(221, 60, 60);
+  height: 20px;
+  font-size:100%;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'VT323', monospace;
+}
+#side:hover, #side:active{
+  background-color: red;
+  height: 20px;
+  font-size:100%;
+  margin-top: 2px;
+  margin-bottom: 3px;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'VT323', monospace;
+}
+footer{
+  margin-bottom: 20px;
+  position: absolute;
+  bottom:0;
+  width: 99%;
+}
+#side{
+  width:100px
+}
+#link{
+  text-align: left;
+  font-size: 19px;
+  font-family: monospace;
+  color: #5e4a0d;
+  font-family: 'VT323', monospace;
+}
