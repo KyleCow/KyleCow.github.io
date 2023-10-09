@@ -9,11 +9,25 @@
       <meta name="twitter:site" content="@kylecow260" />
       <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/749377854354366464/UOORbW_S_bigger.jpg" />
       <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-      <h1>Kyle's Project Dump (Portfolio)</h1>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      <script type="text/javascript" src="	https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ext-searchbox.js"></script>
+      <h1>Maths Blog</h1>
     </head>
     <body>
       <div id = 'body'>
         <a href="/legacy"><3</a>
+        <p>I plan on writing maths stuff here I guess, I want to write better notes on manifolds because the module that i am taking is poorly written. 
+            <br> Let $M$ be a manifold, that means that we have some open cover $\{U_i\}$ such that for each open set $U_i$ we have some $\varphi_i: U_i \to \Omega \subset \mathbb{R}^{n}$ which is a
+            homeomorphism and these homeomorphisms are smooth. That is that if $U_i$ and $U_j$ intersect (call the intersection $V$ for brevity), the composition map $\varphi_j \circ \varphi_i^{-1}: \varphi_i(V)\to \varphi_j(V)$ 
+            is smooth ($C^{\infty}$)<br>
+            <p align="center"><img align="center" src="https://i.upmath.me/svg/%0A%5Cbegin%7Btikzcd%7D%0AU_i%20%5Carrow%5Br%2C%20%22%5Coperatorname%7Bid%7D%22%5D%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%26%20U_j%20%5Carrow%5Bd%2C%20%22%5Cvarphi_j%22%5D%20%5C%5C%0A%5Cvarphi_i(V)%20%5Carrow%5Bu%2C%20%22%5Cvarphi_i%5E%7B-1%7D%22%5D%20%5Carrow%5Br%2C%20%22%5Ctext%7Bcomposition%7D%22%2C%20dotted%5D%20%26%20%5Cvarphi_i(V)%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%5Cend%7Btikzcd%7D%0A" alt="
+\begin{tikzcd}
+U_i \arrow[r, &quot;\operatorname{id}&quot;]                                               &amp; U_j \arrow[d, &quot;\varphi_j&quot;] \\
+\varphi_i(V) \arrow[u, &quot;\varphi_i^{-1}&quot;] \arrow[r, &quot;\text{composition}&quot;, dotted] &amp; \varphi_i(V)              
+\end{tikzcd}
+" /></p>
+            <br> This notion can be generalised where instead of taking $\mathbb{R}^n$ as our so called 'model space' we instead take just a general topological space $S$, similarly instead of requiring that the
+          composition/transition map be $C^{\infty}$ we can just replace it by some $\Gamma$ which is called a pseudogroup, essentially all it is is a space of homeomorphisms such that we maintain properties such as restriction, inverses, and glueing (we if we have a bunch of functions covering a space we can stick them all together and we still have such a function). This is, at least for now, abstraction for the sake of abstraction and should only be seen as a useful generalisation not as the fundamental intuition</p>
       </div>
 
       <div id = 'footer'>
