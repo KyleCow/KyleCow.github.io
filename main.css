@@ -114,9 +114,12 @@ footer{
 
 .switch {
   position: fixed;
+  margin-left: 1em;
+  margin-top:  1em;
   display: inline-block;
   width: 60px;
   height: 34px;
+  z-index: 1;
 }
 
 
