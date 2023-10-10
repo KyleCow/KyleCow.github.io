@@ -1,5 +1,7 @@
 
-
+img{
+   transition: .4s;
+}
 
 iframe{
   border:0ch
