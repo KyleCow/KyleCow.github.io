@@ -12,6 +12,21 @@
       <script type="text/javascript"
    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js">
 </script>
+        <script type="text/x-mathjax-config">
+MathJax.Hub.processSectionDelay = 0;
+MathJax.Hub.Config({
+  messageStyle: 'none',
+  showProcessingMessages: false,
+  tex2jax: {
+    inlineMath: [['$', '$']],
+    displayMath: [['$$', '$$']],
+    processEscapes: true
+  },
+  SVG: {
+    scale: (!!navigator.userAgent.match(/(mac)|(mobile)/i) ? 100 : 180)
+  }
+});
+</script>
       <h1>Maths Blog</h1>
     </head>
     <body>
