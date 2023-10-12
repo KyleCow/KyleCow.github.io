@@ -40,6 +40,8 @@ p{
   color: #b87c49;
   font-family: 'VT323', monospace;
   transition: .4s;
+  margin-left: 12.5%;
+  inline-size: 75%;
 }
 #m:link, #m:visited{
   background-color: #f44336;
