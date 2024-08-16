@@ -21,6 +21,207 @@
     <p>So there is m arrows pointing out of any vertex, also since (A^t)^2 = (A^2)^t = A^2 the same applies to the rows so there is m arrows pointing into each vertex too</p>
     <p>We can see an example construction by taking the matrix S that is the mxm identity with the rows cycled along one place then taking the block matrix A = [[S^0, S^1, S^2 ... S^{m-1}],[S^0, S^1, S^2 ... S^{m-1}]...[S^0, S^1, S^2 ... S^{m-1}]]</p>
     <p>Then since the sum of S^m is the matrix of all 1s we get that this matrix squared is what we want</p>
+    <p> The code for checking planarity is </p>
+    <code>
+      import numpy as np
+import gravis as gv
+import numpy.linalg as la
+import networkx as nx
+
+def diGraph_to_Graph(matrix):
+    A = matrix + np.transpose(matrix)
+    for i in range(len(A)):
+        for j in range(len(A[i])):
+            A[i][j] = min(A[i][j], 1)
+    return A
+
+for m in range(1,500):
+    
+    #Build the matrix that's the identity shifted
+
+    A = np.zeros((m, m))
+
+    for i in range(m):
+        for j in range(m):
+            if (i + 1)%m == j:
+                A[i][j] = 1
+
+    L = []
+    k = []
+
+    #Construct the block matrix of powers of this matrix
+
+    for i in range(m):
+        k.append(1)
+
+    for i in range(m):
+        L.append(k)
+
+    for i in range(m):
+        for j in range(m):
+            if (i + 1)%m == j:
+                L[i][j] = la.matrix_power(A, i)
+
+    S = np.block(L)
+
+    # print(S)
+    # print(la.matrix_power(S,2))
+    
+    # G = nx.DiGraph(S)
+    # fig = gv.d3(G, show_node_label = False) 
+    # fig.display()
+
+
+
+    R = diGraph_to_Graph(S)
+    H = nx.from_numpy_matrix(R)
+    #print(R)
+    print(str(nx.is_planar(H))+' for n = '+str(m*m))
+    </code>
+  Additionally we can find examples for other powers with the following genetic algorithm
+    <code>
+      import numpy as np
+import numpy.linalg as la
+import matplotlib.pyplot as plt
+import networkx as nx
+
+import gravis as gv
+from netwulf import visualize
+
+
+#Make an n^2 by n^2 matrix A with entries only 0s and 1s such that A^k is the matrix of all 1s via the genetic algorithm
+#This is interesting to code since a matrix with only 1s and 0s will correspond to a directed graph
+#So this problem gives us a graph where there is a unique path of length k between any two points
+
+#We can 'immediatly' see that n is a perfect kth power since the eigenvalues of A^k are 0,...,0,n 
+#So the eigenvalues of A are 0...(+-)n^{1/k} and since the trace must be a natural number
+#(+-)n^{1/k} is a natural number so n is a perfect kth power
+
+#findNiceRoot(Matrix, Power, Population Size, Generations, Attempts, Wether to print the failed attempts)
+
+
+def findNiceRoot(k, M, d, Gen, numAttempts, printOnFail):
+    
+    n = len(M)
+
+    A = np.random.randint(2, size = (n, n))
+
+    #we want to minimize 
+    #la.matrix_power(A, k) - M
+
+    #With the conditions that
+    #A[i][j] = 0, 1
+
+    #Ive done this before!! its just my machine learning algo
+
+
+    def Cost(W):
+        return la.norm(la.matrix_power(W, k) - M)
+
+
+    def reproduce(T1, T2):
+        t = np.random.randint(2 ,size = (n,n))
+
+        s = T1*(1-t) + T2*t
+
+        for i in range(n):
+            for j in range(n):
+                if np.random.rand() < 0.01:
+                    s[i][j] = 1-s[i][j]
+
+        return s
+
+    def findCosts(input):
+        r = []
+        for element in input:
+            r.append([Cost(element), element])
+        return r
+
+    def f(tup):
+        return tup[0]
+
+    def generation(input):
+        L = findCosts(input)
+        # for element in input:
+        #     L.append([Cost(element[0], element[1]), element])
+
+        sort = sorted(L, key = f)
+        next = [thing[1] for thing in sort]
+
+        new1 = next[:int(d/2)]
+        
+        del sort
+
+        new2 = []
+
+        for i in range(len(new1)):
+            #P0 = reproduce(player, random.choice(new1))
+            P0 = reproduce(new1[i], new1[int(np.floor(i/2))])
+            new2.append(P0)
+
+        F = new1 + new2
+
+        #to add new variation
+        F[-1] = np.random.randint(2, size = (n,n))
+
+
+        # L = None
+        # sort = None
+        # new1 = None
+        # next = None
+        # new2 = None
+        # input = None
+
+        return F
+    for attempts in range(numAttempts):
+        print('---------------ATTEMPT '+str(attempts)+'---------------')
+        pop = []
+        X = np.array([])
+        Y = np.array([])
+        minim = np.infty
+
+        for i in range(0,d):
+            pop.append(np.random.randint(2, size = (n,n)))
+
+        for i in range(Gen):
+            pop = generation(pop)
+            u = Cost(pop[0])
+            X = np.append(X, i)
+            Y = np.append(Y, u)
+            if(u < minim):
+                plt.plot(i,u,'ro')
+                best = pop[0]
+                minim = u
+            if u == 0:
+                break
+            #print(u)
+
+
+        if minim == 0:
+            print(best)
+            #plt.plot(X,Y)
+            #plt.show()
+            G=nx.DiGraph(best)
+            fig = gv.d3(G, show_node_label = False) 
+            fig.display()
+            plt.plot(X, Y)
+            plt.show()
+            # nx.draw_networkx(G,arrows=True)
+        elif printOnFail:
+            print('|A^'+str(k)+'-𝟏| = '+str(minim))
+            print('given by the matrix:')
+            print(best)
+            print('which squares to')
+            print(la.matrix_power(best, k))
+            plt.plot(X, Y)
+            plt.show()
+        plt.clf()
+
+def problem(m,k, d = 1000, Gen = 500, numAttempts = 1, printOnFail = False):
+    findNiceRoot(k, np.ones((m**k, m**k)), d, Gen, numAttempts, printOnFail)
+
+problem(3, 2, numAttempts = 10, printOnFail = True)
+    </code>
   </body>
   
 </html>
