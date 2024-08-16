@@ -17,8 +17,8 @@
     <p>Since the matrix of all ones has eigenvalues of 0,...,0,n, A must have eigenvalues of 0,...,0,±sqrt(n). The number of loops is then the trace which is the sum of these values</p>
     <p>so since the trace is a positive integer its sqrt(n) which must be an integer</p>
     <p>By noting that (A^2)^2 = nA^2 we see that A^2(A^2-n)=0 so letting m^2 = n, A^2(A-m)(A+m)=0, we also see that the characteristic polynomial of A is A^{n-1}(A-m) since we know the eigenvalues (since we already know that n is an integer square and 1 is boring we can assume that n>3 so n-1>2)</p>
-    <p>So the minimal polynomial must divide both of these polynomials so must divide A^2(A-m) so A^2A=A^2m. Since each entry of A^2A will give you the sum over a row we see that the sum over each row is m</p>
-    <p>So there is m arrows pointing out of any vertex, also since (A^t)^2 = (A^2)^t = A^2 the same applies to the collumns so there is m arrows pointing into each vertex too</p>
+    <p>So the minimal polynomial must divide both of these polynomials so must divide A^2(A-m) so A^2A=A^2m. Since each entry of A^2A will give you the sum over a column we see that the sum over each column is m</p>
+    <p>So there is m arrows pointing out of any vertex, also since (A^t)^2 = (A^2)^t = A^2 the same applies to the rows so there is m arrows pointing into each vertex too</p>
     <p>We can see an example construction by taking the matrix S that is the mxm identity with the rows cycled along one place then taking the block matrix A = [[S^0, S^1, S^2 ... S^{m-1}],[S^0, S^1, S^2 ... S^{m-1}]...[S^0, S^1, S^2 ... S^{m-1}]]</p>
     <p>Then since the sum of S^m is the matrix of all 1s we get that this matrix squared is what we want</p>
   </body>
