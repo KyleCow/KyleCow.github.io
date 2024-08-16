@@ -22,7 +22,7 @@
     <p>We can see an example construction by taking the matrix S that is the mxm identity with the rows cycled along one place then taking the block matrix A = [[S^0, S^1, S^2 ... S^{m-1}],[S^0, S^1, S^2 ... S^{m-1}]...[S^0, S^1, S^2 ... S^{m-1}]]</p>
     <p>Then since the sum of S^m is the matrix of all 1s we get that this matrix squared is what we want</p>
     <p> The code for checking planarity is </p>
-    <code>
+    <xmp>
       import numpy as np
 import gravis as gv
 import numpy.linalg as la
@@ -77,9 +77,9 @@ for m in range(1,500):
     H = nx.from_numpy_matrix(R)
     #print(R)
     print(str(nx.is_planar(H))+' for n = '+str(m*m))
-    </code>
-  Additionally we can find examples for other powers with the following genetic algorithm
-    <code>
+    </xmp>
+  <p>Additionally we can find examples for other powers with the following genetic algorithm</p>
+    <xmp>
       import numpy as np
 import numpy.linalg as la
 import matplotlib.pyplot as plt
@@ -221,7 +221,7 @@ def problem(m,k, d = 1000, Gen = 500, numAttempts = 1, printOnFail = False):
     findNiceRoot(k, np.ones((m**k, m**k)), d, Gen, numAttempts, printOnFail)
 
 problem(3, 2, numAttempts = 10, printOnFail = True)
-    </code>
+    </xmp>
   </body>
   
 </html>
