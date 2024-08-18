@@ -23,7 +23,7 @@
     <p>Then since the sum of S^m is the matrix of all 1s we get that this matrix squared is what we want</p>
     <p>After some additional thinking we can conclude that the only planar examples are at n=1,4,9. Since if the graph were planar then there would be a vertex of degree &lt;6 and we can show that there isnt</p>
     <p> Since there is a unique path of length 2 from each vertex to itself we see that each vertex either has exactly one bidirectional edge or loop, since we know how many ins and outs there are already we can conclude</p>
-    <p>If there's a loop then the degree is just 2m and if there's not then the degree is 2m-1 since we dont count the bidirectional edge twice. So we need 2m-1&lt;6, so m&lt;3.5 so we cant get any bigger shapes and we're done</p>
+    <p>Not taking this into account the degree is 2m, if there's a bidirectional edge then its just 2m-1 as we don't count it twice,if there's a loop then I cant remember if we count it or not, for safety however ill remove it giving degree equal to 2m-2. So we need 2m-2&lt;6, so m&lt;4 so we cant get any bigger shapes and we're done</p>
     <p> The code for checking planarity is </p>
     <xmp>
       import numpy as np
