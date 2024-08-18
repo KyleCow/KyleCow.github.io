@@ -6,7 +6,7 @@
     <p>There is a unique path from any corner to another by following the arrows. You can go in the direction of the arrows or if there is a circle on a corner you can stay still</p>
     <p>The following is a convex polyhedron with edges labeled such that there is a unique length 2 path from any corner to another by following the arrows. You can go in the direction of the arrows or if there is a circle on a corner you can stay still</p>
     <p>If this circle bit upsets you there is a fairly simple proof that any directed graph with n vertices and with a unique distance 2 path between any 2 points must have at exactly sqrt(n) loops so this is unavoidable</p>
-    <p>This property is vaguely interesting as this means that sqrt(n) must be an integer, for 4 corners we can do a square and for 9 we can do this Tri-Augmented Triangular Prism, i would conjecture that there are no other convex shapes with this property but i dont have a proof right now. The construction that gives this graph for n=9 gives a square for n=4 and non-planar graphs for 9&lt;n&lt;1226 so presumably they are never planar beyond this point so cannot be made into shapes</p>
+    <p>This property is vaguely interesting as this means that sqrt(n) must be an integer, for 4 corners we can do a square and for 9 we can do this Tri-Augmented Triangular Prism, i would conjecture that there are no other convex shapes with this property but i dont have a proof right now. The construction that gives this graph for n=9 gives a square for n=4 and non-planar graphs for 9&lt;n&lt;1226 so presumably they are never planar beyond this point so cannot be made into shapes, I have now proven this to be true, the only planar examples are for n=1,4,9</p>
     <p>We can also derive that there if there is n^2 corners there have to be n arrows pointing in and n pointing out of each corner (this bit is harder to see)</p>
     <img src = "thisNet.png"></img>
     <img src = "thisnettabs.png"></img>
@@ -21,6 +21,9 @@
     <p>So there is m arrows pointing out of any vertex, also since (A^t)^2 = (A^2)^t = A^2 the same applies to the rows so there is m arrows pointing into each vertex too</p>
     <p>We can see an example construction by taking the matrix S that is the mxm identity with the rows cycled along one place then taking the block matrix A = [[S^0, S^1, S^2 ... S^{m-1}],[S^0, S^1, S^2 ... S^{m-1}]...[S^0, S^1, S^2 ... S^{m-1}]]</p>
     <p>Then since the sum of S^m is the matrix of all 1s we get that this matrix squared is what we want</p>
+    <p>After some additional thinking we can conclude that the only planar examples are at n=1,4,9. Since if the graph were planar then there would be a vertex of degree &lt;6 and we can show that there isnt</p>
+    <p> Since there is a unique path of length 2 from each vertex to itself we see that each vertex either has exactly one bidirectional edge or loop, since we know how many ins and outs there are already we can conclude</p>
+    <p>If there's a loop then the degree is just 2m and if there's not then the degree is 2m-1 since we dont count the bidirectional edge twice. So we need 2m-1&lt;6, so m&lt;3.5 so we cant get any bigger shapes and we're done</p>
     <p> The code for checking planarity is </p>
     <xmp>
       import numpy as np
