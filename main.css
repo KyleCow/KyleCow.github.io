@@ -60,7 +60,6 @@ p{
 }
 
 #side:link{
-  height: 20px;
   font-size:100%;
   margin-top: 2px;
   margin-bottom: 3px;
@@ -74,7 +73,6 @@ p{
 }
 #side:visited{
   background-color: rgb(221, 60, 60);
-  height: 20px;
   font-size:100%;
   margin-top: 2px;
   margin-bottom: 3px;
@@ -87,7 +85,6 @@ p{
 }
 #side:hover, #side:active{
   background-color: red;
-  height: 20px;
   font-size:100%;
   margin-top: 2px;
   margin-bottom: 3px;
@@ -105,7 +102,7 @@ footer{
   width: 99%;
 }
 #side{
-  width:100px
+  width:100%
 }
 #link{
   text-align: left;
