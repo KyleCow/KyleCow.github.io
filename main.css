@@ -59,6 +59,12 @@ p{
   margin-top: -20px;
 }
 
+#bogfish {
+  text-decoration: none;
+  color: red;
+}
+
+
 #side:link{
   font-size:100%;
   margin-top: 2px;
