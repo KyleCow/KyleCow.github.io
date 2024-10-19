@@ -188,7 +188,7 @@ input:checked + .slider:before {
 
 .menu {
   display: block;
-  margin-left: 90%;
+  margin-left: 80%;
   position: relative;
   width: 10%;
 }
