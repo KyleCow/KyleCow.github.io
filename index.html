@@ -128,6 +128,167 @@ function darkmode() {
             // update the values of a and b.
             document.addEventListener('mousemove', updateVariable, true);
 
+            calculator.setState({
+    "version": 11,
+    "randomSeed": "73776ac1c6aa2c7b3d54960b1c9df432",
+    "graph": {
+        "viewport": {
+            "xmin": -10,
+            "ymin": -7.2592592592592595,
+            "xmax": 10,
+            "ymax": 7.2592592592592595
+        },
+        "showGrid": false,
+        "showXAxis": false,
+        "showYAxis": false,
+        "__v12ViewportLatexStash": {
+            "xmin": "-10",
+            "xmax": "10",
+            "ymin": "-7.2592592592592595",
+            "ymax": "7.2592592592592595"
+        }
+    },
+    "expressions": {
+        "list": [
+            {
+                "type": "expression",
+                "id": "16",
+                "color": "#2d70b3",
+                "latex": "p_{2}=-2.851018220793141"
+            },
+            {
+                "type": "expression",
+                "id": "15",
+                "color": "#388c46",
+                "latex": "p_{1}=0.37513397642015"
+            },
+            {
+                "type": "expression",
+                "id": "1",
+                "color": "#5e4a0d",
+                "latex": "F\\left(x,y\\right)+B\\left(x,y\\right)R\\left(x,y\\right)=0",
+                "lineWidth": "5"
+            },
+            {
+                "type": "expression",
+                "id": "2",
+                "color": "#6042a6",
+                "latex": "F\\left(x,y\\right)=y^{2}-\\frac{2}{1.5^{3}}x^{3}+\\frac{2x}{1.5}-1"
+            },
+            {
+                "type": "expression",
+                "id": "3",
+                "color": "#000000",
+                "latex": "R\\left(x,y\\right)=\\sin\\left(ax+by+c\\right)+-.5\\sin\\left(3bx+2ay+\\frac{c}{6}\\right)"
+            },
+            {
+                "type": "expression",
+                "id": "4",
+                "color": "#c74440",
+                "latex": "t_{0}=5.236",
+                "slider": {
+                    "hardMin": true,
+                    "hardMax": true,
+                    "loopMode": "LOOP_FORWARD",
+                    "isPlaying": true,
+                    "min": "0",
+                    "max": "2\\pi"
+                }
+            },
+            {
+                "type": "expression",
+                "id": "5",
+                "color": "#2d70b3",
+                "latex": "t_{1}=1.105",
+                "slider": {
+                    "hardMin": true,
+                    "hardMax": true,
+                    "animationPeriod": 5333.333333333333,
+                    "loopMode": "LOOP_FORWARD",
+                    "isPlaying": true,
+                    "min": "0",
+                    "max": "2\\pi"
+                }
+            },
+            {
+                "type": "expression",
+                "id": "6",
+                "color": "#388c46",
+                "latex": "t_{3}=1.936",
+                "slider": {
+                    "hardMin": true,
+                    "hardMax": true,
+                    "animationPeriod": 8000,
+                    "loopMode": "LOOP_FORWARD",
+                    "isPlaying": true,
+                    "min": "0",
+                    "max": "2\\pi"
+                }
+            },
+            {
+                "type": "expression",
+                "id": "7",
+                "color": "#6042a6",
+                "latex": "a=\\sin\\left(t_{0}\\right)"
+            },
+            {
+                "type": "expression",
+                "id": "8",
+                "color": "#000000",
+                "latex": "b=\\sin\\left(t_{1}\\right)"
+            },
+            {
+                "type": "expression",
+                "id": "9",
+                "color": "#c74440",
+                "latex": "c=\\sin\\left(t_{3}\\right)"
+            },
+            {
+                "type": "expression",
+                "id": "10",
+                "color": "#2d70b3",
+                "latex": "r=1",
+                "hidden": true
+            },
+            {
+                "type": "expression",
+                "id": "11",
+                "color": "#388c46",
+                "latex": "s=1"
+            },
+            {
+                "type": "expression",
+                "id": "12",
+                "color": "#6042a6",
+                "latex": "B\\left(x,y\\right)=B_{1}\\left(\\left|\\left(x-p_{1},y-p_{2}\\right)\\right|\\right)",
+                "hidden": true
+            },
+            {
+                "type": "expression",
+                "id": "13",
+                "color": "#000000",
+                "latex": "B_{1}\\left(x\\right)=\\frac{B_{2}\\left(\\frac{x}{s}-r\\right)}{B_{2}\\left(\\frac{x}{s}-r\\right)+B_{2}\\left(1-\\frac{x}{s}+r\\right)}",
+                "hidden": true
+            },
+            {
+                "type": "expression",
+                "id": "14",
+                "color": "#c74440",
+                "latex": "B_{2}\\left(x\\right)=\\left\\{x\\ge0:e^{-\\frac{1}{x}},0\\right\\}",
+                "hidden": true
+            },
+            {
+                "type": "expression",
+                "id": "17",
+                "color": "#e7c3a5",
+                "latex": "\\left|x\\right|+1>0"
+            }
+        ]
+    },
+    "includeFunctionParametersInRandomSeed": true,
+    "doNotMigrateMovablePointStyle": true
+})
+
                 </script>
     <!--<body  id = 'bdy'>
       <label class="switch">
