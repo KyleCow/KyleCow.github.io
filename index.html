@@ -1,5 +1,6 @@
 <DOCTYPEhtml>
   <html>
+    <div id="calculator" style="width: 99%; height: 98%;"></div>
   <head>
     <ul class="menu">
   <li>
@@ -15,7 +16,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script type="text/javascript" src="	https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.1/ext-searchbox.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald|Share+Tech+Mono" rel="stylesheet">
-
+    <script src="https://www.desmos.com/api/v1.11/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
     <meta name="author" content="KyleCow" />
       <!--<meta name="description" content="This is a pointless website that i decided to make as a project dump of stuff that i decided to make for no apparent reason. Dont ask about why anything is on there. K">
       -->
@@ -66,6 +67,68 @@ function darkmode() {
 </script>
     
   </head>
+  <body>
+    
+        <script>
+            var X = window.innerWidth;
+            var Y = window.innerHeight;
+            var V1 = Math.random()*2;
+            var V2 = Math.random()*2+2;
+            var V3 = Math.random()*2+4;
+            var elt = document.getElementById('calculator');
+            var calculator = Desmos.GraphingCalculator(elt, 
+                {
+                    keypad              : false,
+                    expressions         : false,
+                    settingsMenu        : false,
+                    zoomButtons         : false,
+                    expressionsTopbar   : false,
+                    lockViewport        : true,
+                    showGrid            : false,
+                    showXAxis           : false,
+                    showYAxis           : false
+                }
+            );
+
+            calculator.setExpressions([
+                
+                {id:'16', latex:'p_{2}=5.51'},
+                {id:'15', latex:'p_{1}=2.8'},
+                {id:'1',color:'#5e4a0d',lineWidth: '5', latex:'F\\left(x,y\\right)+B\\left(x,y\\right)R\\left(x,y\\right)=0'},
+                {id:'2', latex:'F\\left(x,y\\right)=y^{2}-\\frac{2}{1.5^{3}}x^{3}+\\frac{2x}{1.5}-1'},
+                {id:'3', latex:'R\\left(x,y\\right)=\\sin\\left(ax+by+c\\right)+-.5\\sin\\left(3bx+2ay+\\frac{c}{6}\\right)'},
+                {id:'4',playing:true,sliderBounds: { min: '0', max: '2\\pi'}, latex:'t_{0}='+(V1)},
+                {id:'5',playing:true,sliderBounds: { min: '0', max: '2\\pi'}, latex:'t_{1}='+(V2)},
+                {id:'6',playing:true,sliderBounds: { min: '0', max: '2\\pi'}, latex:'t_{3}='+(V3)},
+                {id:'7', latex:'a=\\sin\\left(t_{0}\\right)'},
+                {id:'8', latex:'b=\\sin\\left(t_{1}\\right)'},
+                {id:'9', latex:'c=\\sin\\left(t_{3}\\right)'},
+                {id:'10',hidden:true, latex:'r=1'},
+                {id:'11', latex:'s=1'},
+                {id:'12',hidden:true, latex:'B\\left(x,y\\right)=B_{1}\\left(\\left|\\left(x-p_{1},y-p_{2}\\right)\\right|\\right)'},
+                {id:'13',hidden:true, latex:'B_{1}\\left(x\\right)=\\frac{B_{2}\\left(\\frac{x}{s}-r\\right)}{B_{2}\\left(\\frac{x}{s}-r\\right)+B_{2}\\left(1-\\frac{x}{s}+r\\right)}'},
+                {id:'14',hidden:true, latex:'B_{2}\\left(x\\right)=\\left\\{x\\ge0:e^{-\\frac{1}{x}},0\\right\\}'},
+                // {id:'18', latex:'(p_{1},p_{2})'},
+                
+                {id:'17',color:'#e7c3a5', latex:'\\left|x\\right|+1>0'}
+            ]);
+
+            var updateVariable = function (evt) {
+                calculator.setExpression({id:'15', latex:'p_{1}='+(evt.pageX/X * 20 - 10)});
+                calculator.setExpression({id:'16', latex:'p_{2}='+(-evt.pageY/X * 20 + 10*Y/X)});
+                // console.log(-evt.pageY/X * 20 + 10*Y/X,evt.pageX/X * 20-10)
+            };
+            function reportWindowSize() {
+            X = window.innerWidth;
+            Y = window.innerHeight;
+            }
+
+            window.onresize = reportWindowSize;
+            // Register the callback as a listener on mousemove, and use it to
+            // update the values of a and b.
+            document.addEventListener('mousemove', updateVariable, true);
+
+                </script>
     <!--<body  id = 'bdy'>
       <label class="switch">
   <input type="checkbox" checked onclick="darkmode()">

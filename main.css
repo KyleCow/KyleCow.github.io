@@ -7,6 +7,11 @@ iframe{
   border:0ch
 }
 
+#calculator{
+    position:absolute;
+    z-index: -999;
+}
+
 body{
   background-color: #e7c3a5;
   margin-bottom:50px;
@@ -194,7 +199,7 @@ input:checked + .slider:before {
 }
 
 .menu > li > a {
-  background: #dfae86;
+  background: #e7c3a5;
   color: #fff;
   display: block;
   padding: 10px 20px;
