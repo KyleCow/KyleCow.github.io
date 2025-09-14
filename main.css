@@ -195,7 +195,7 @@ input:checked + .slider:before {
   display: block;
   margin-left: 80%;
   position: relative;
-  width: 10%;
+  width: fit-content;
 }
 
 .menu > li > a {
@@ -207,6 +207,7 @@ input:checked + .slider:before {
   text-decoration: none;
   font-family: 'VT323', monospace;
   list-style-type: none ;
+  width: fit-content;
 }
 
 .menu ul {
@@ -217,12 +218,12 @@ input:checked + .slider:before {
   position: absolute;
   transition: all .5s ease;
   top: 35px;
-  width: 100%;
   list-style-type: none ;
+  width: fit-content;
 }
 
 .menu li:hover ul {
-
+  width: fit-content;
   opacity: 1;
   transform: translateY(0);
 }
@@ -232,4 +233,5 @@ input:checked + .slider:before {
   display: block;
   padding: 5px 20px;
   font-family: 'VT323', monospace;
+  width: fit-content;
 }
