@@ -47,7 +47,6 @@ p{
   transition: .4s;
   margin-left: 12.5%;
   inline-size: 75%;
-  text-allign: center;
 }
 #m:link, #m:visited{
   background-color: #f44336;
@@ -237,4 +236,5 @@ input:checked + .slider:before {
   width: fit-content;
   text-align: center;
 }
+
 
