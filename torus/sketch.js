@@ -56,6 +56,7 @@ function length_list_to_pattern(X) {
     }
     string = string.concat("\n");
   }
+  string = string.concat("Finish off by sewing start loop and end loop together")
   return string;
 }
 // print("Measurements are given in # of stitches, can be decimal")
