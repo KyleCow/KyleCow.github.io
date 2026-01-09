@@ -1,6 +1,6 @@
 function length_list_to_pattern(X) {
   let string = "Start with ".concat(X[0]," chain stitches in a loop \n");
-  for (let i = 0; i < X.length; i++) {
+  for (let i = 0; i < X.length-1; i++) {
     let num_increases = X[i + (1 % X.length)] - X[i];
     let num_stitches = X[i];
     string = string.concat("R", i + 1, ": ");
@@ -30,14 +30,14 @@ function length_list_to_pattern(X) {
       let section_size = int(Math.floor(num_stitches / num_increases));
       let dupe = "";
       if (section_size == 1) {
-        dupe = "inc";
+        dupe = "dec";
       } else if (section_size == 2) {
-        dupe = "[dc, inc]";
+        dupe = "[dc, dec]";
       } else {
-        dupe = "[".concat(section_size - 1, "dc, inc]");
+        dupe = "[".concat(section_size - 1, "dc, dec]");
       }
       if (num_increases == 1) {
-        string = string.concat(section_size - 1, "dc, inc");
+        string = string.concat(section_size - 1, "dc, dec");
       } else {
         string = string.concat(num_increases, "x", dupe);
       }
@@ -100,7 +100,7 @@ console.log(r,R0)
 
   let X = [];
 
-  for (i = 0; i < theta.length-1; i++) {
+  for (i = 0; i < theta.length; i++) {
     X[i] = Math.round(2 * Math.PI * (R - r * Math.cos(theta[i])));
   }
   
