@@ -1,5 +1,5 @@
 function length_list_to_pattern(X) {
-  let string = "";
+  let string = "Start with ".concat(X[0]," chain stitches in a loop \n");
   for (let i = 0; i < X.length; i++) {
     let num_increases = X[i + (1 % X.length)] - X[i];
     let num_stitches = X[i];
@@ -99,7 +99,7 @@ console.log(r,R0)
 
   let X = [];
 
-  for (i = 0; i < theta.length; i++) {
+  for (i = 0; i < theta.length-1; i++) {
     X[i] = Math.round(2 * Math.PI * (R - r * Math.cos(theta[i])));
   }
   
