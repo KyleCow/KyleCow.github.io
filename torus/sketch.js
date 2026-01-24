@@ -1,5 +1,5 @@
 function length_list_to_pattern(X) {
-  let string = "Start with ".concat(X[0]," chain stitches, connect with ss to make a loop\n");
+  let string = "Start with ".concat(X[0]," chain stitches, connect with ss to make a loop (",X[0],") \n");
   for (let i = 0; i < X.length-1; i++) {
     let num_increases = X[i + (1 % X.length)] - X[i];
     let num_stitches = X[i];
@@ -15,7 +15,7 @@ function length_list_to_pattern(X) {
         dupe = "[".concat(section_size - 1, "dc, inc]");
       }
       if (num_increases == 1) {
-        string = string.concat(section_size - 1, "dc, inc, ");
+        string = string.concat(section_size - 1, "dc, inc ");
       } else {
         string = string.concat(num_increases, "x", dupe);
       }
@@ -54,7 +54,7 @@ function length_list_to_pattern(X) {
     } else {
       string = string.concat(X[i], "dc");
     }
-    string = string.concat("\n");
+    string = string.concat(" (",X[i+1],") \n");
   }
   string = string.concat("Finish off by sewing start loop and end loop together")
   return string;
