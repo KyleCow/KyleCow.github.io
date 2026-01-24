@@ -1,5 +1,5 @@
 function length_list_to_pattern(X) {
-  let string = "Start with ".concat(X[0]," chain stitches in a loop \n");
+  let string = "Start with ".concat(X[0]," chain stitches, connect with ss to make a loop\n");
   for (let i = 0; i < X.length-1; i++) {
     let num_increases = X[i + (1 % X.length)] - X[i];
     let num_stitches = X[i];
