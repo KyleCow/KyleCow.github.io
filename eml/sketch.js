@@ -1,4 +1,7 @@
-let input = "EE1EE111EEE1EE1E1EE1111E111"
+// let input = "EE1EE111EEE1EE1E1EE1111E111"
+let input = "EE1EE1E1EE1111E11"
+// let input = "E1E1EEE1111"
+// let input = "E11"
 let r1 = 89
 let r2 = 89
 let r3 = 89
@@ -26,10 +29,22 @@ function rem(){
 }
 
 function eml(x,y) {
-  return(exp(x) - log(y))
+  if(x == 1){
+    x = new Complex(1,0)
+  }
+  if(y == 1){
+    y = new Complex(1,0)
+  }
+  let val = expc(x).subc(lnc(y))
+  if(val.re == Infinity && frameCount < 10){
+    // print(x,y)
+
+  }
+  return val
 }
 
 function draw() {
+  // print(eml(1,1))
   background(70, 102, 59);
   // print(input)
   translate(width/2, height/2)
@@ -41,7 +56,7 @@ function draw() {
   textAlign(CENTER)
   try {
     if(str(eval(equation)).slice(0,1) != "f"){
-       text(str(eval(equation)), 0, height/6)
+       text(eval(equation).prnt(), 0, height/6)
     } else {
       text("Invalid Equation", 0, height/6)
     }
