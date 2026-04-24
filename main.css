@@ -1,6 +1,10 @@
 
 img{
-   transition: .4s;
+    width: 40%;
+    display: block;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 iframe{
