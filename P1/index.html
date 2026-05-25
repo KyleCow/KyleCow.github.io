@@ -53,10 +53,53 @@ A = \bigoplus_{ij}\hom(P_i,P_j)
 $$
 So the arrows are just maps between these projective generators. In the case of our derived category the equivalence is induced by pretending that these \(E_i\) are the projectives \(P_i\), as we have isomorphisms \(R\hom(E_i, E_j) \to R\hom(P_i, P_j)\) using the theory of semiorthogonal decompositions we can construct the equivalence. This is to say that given a derived category \(\mathcal{D}\) if we can find a strong full exceptional collection of objects, we can draw a quiver where vertices are these objects and arrows are a \(k\) basis of morphisms \(E_i \to E_j\), then the relations will be whatever relations we get on the maps in \(\mathcal{D}\) giving us an equivalence to the derived category of quiver representations. Doing this for \(\mathbb{P}^n\) with our standard exceptional collection gives vertices \(\alpha_0 ,..., \alpha_n\) with \(n(n-1)\) arrows going \(\alpha_i \to \alpha_{i+1}\), written $\(\phi_i^j\) with relations \(\{\phi_{i+1}^{k} \phi_i^k - \phi_{i+1}^k \phi_{i}^j\}\)<br>
 I realise I started this out talking saying semiorthogonal decompositions but never actually said what that was. Put simply its a generalisation of this setup where we decompose a category into an ordered series of subcategories that generate the category and have no maps going up, an exceptional collection gives a semiorthogonal decomposition \(\langle \langle E_n,...,E_1 \rangle^{\bot},E_n,...,E_1 \rangle\) where \((X)^\bot\) is those objects who have no homs with \(X\)
+<h2>Blowups</h2>
 <h2>Complex analytic \(\mathbb{P}^1\)</h2>
+<h2>Real analytic \(\mathbb{P}^1\)</h2>
 <h2>\(p\)-adic analytic \(\mathbb{P}^1\)</h2>
 <h2>The flag variety of \(\operatorname{Sl}_2\)</h2>
-I have a confusion here, as flag varieties \(\mathbb{P}^1\) corresponds to \(sl_2\) which is the semisimple lie algebra corresponding to \(A_1\). This is odd because dynkin diagrams are quivers and the Kronecker quiver looks like the \(B_2\) or maybe \(A_2\) diagram. The main issue here is that \(A_1\) is so simple that there's no real way to redraw it that the representations can be anything but \(k-\mathbf{Vect}\) which will clearly be distinct from anything associated to \(\bullet \rightrightarrows \bullet\). An interesting question is let \(F\) be the flag variety of a seimisimple lie/algebraic group \(G\) with corresponding dynkin diagram \(D\), is there a combinatorial way to find a quiver with relations \(\mathbf{Q}\) so that \(\mathcal{D}(\mathbf{Q})\) is equivalent to \mathcal{D}(F). Ie this map should send \([\bullet] \mapsto [\bullet \rightrightarrows \bullet]\). My guess is there's no such thing since Dynkin diagrams to me seem more like convenient ways to package data instead of fundamental objects<br>
-<a href="https://math.ucr.edu/home/baez/week180.html">John Baez</a> describes a fundamental property of the dynkin diagram, where you can use it to read off maximal parbolicsof you algebraic group as well as using it to read off the irreducible representatoins. This seems arguably nicer than what we get with the Kronecker quiver since it lets us read off what? Homologically projective complexes?
+Given a vector space \(k^n\) we can construct the \((n-1)\)-dimensional projective space as the space of lines. Similarly we can construct the Grassmanian \(\mathbf{Gr}(\ell,n)\) as the space of \(\ell\)-dimensional subspaces in \(k^n\). There's a natural way to glue these together as an \(\ell\)-dimensional subspace is contained in a bunch of \((\ell+1)\)-dimensional subspaces, which are then contained in some ammount of \(\ell+2\)-dimensional subspaces. So a natural way to look at all of these Grassmanians at once is to consider 
+\[
+F(k^n)=\{(x_0,x_2,...,x_n) \vert x_\ell \subset x_{\ell+1}\} \subset \mathbf{Gr}(0,n) \times \mathbf{Gr}(1,n) \times ... \times \mathbf{Gr}(n-1,n) \times \mathbf{Gr}(n,n)
+\]
+This is called the flag variety and each of the sequences \((x_0,...,x_n)\) is called a flag. To get an explicit description we recall an explicit description of \(\mathbf{Gr}(\ell,n)\). An \(\ell\)-dimensional subspace is described by a list of \(\ell\) vectors in \(k^n\) that are linearly independant, by multiplying this by some matrix \(A \in sl_n\) we can transform this subspace into the space spanned by the first \(\ell\) basis vectors. That is to say any subspace is some matrix times some basic subspace and so is just isomorphic to \(sl_n / B_\ell\) for some subgroup that fixes any subspace. We can compute this explicitly by taking our standard subset as the first \(\ell\) basis vectors
+\[
+\begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1n} \\
+a_{21} & a_{22} & \dots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \dots & a_{nn} \\
+\end{pmatrix} \cdot \begin{pmatrix}
+1 & 0 & \dots & 0 \\
+0 & 1 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \dots & 1 \\
+0 & 0 & \dots & 0 \\ 
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \dots & 0 \\ 
+\end{pmatrix} = \begin{pmatrix}
+a_{11} & a_{12} & \dots & a_{1\ell} \\
+a_{21} & a_{22} & \dots & a_{2\ell} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{n1} & a_{n2} & \dots & a_{n\ell} \\
+\end{pmatrix} 
+\] So we get the subgroup \(B_\ell\) of block matrices 
+\[
+\left\{\left(\begin{array}{@{}c|c@{}}
+  A_{\ell \times \ell}
+  & * \\
+\hline
+  0_{(n-\ell) \times \ell} &
+  B_{(n-\ell) \times (n-\ell)}
+\end{array}\right) \vert \operatorname{det}(A)\operatorname{det}(B)=1\right\}
+\]
+The reason we go through this work is to see what it means to take a subspace, ie if we have some matrix \(A\) representing an \(\ell\) dimensional subspace then it can also represent an \((\ell-1)\)-dimensional subspace and so on, in fact this will give a sequence of subspaces contained in eachother, that's a flag. So in fact any matrix \(A\) represents a flag as a transformation of the canonical flag \(0\subset\langle e_1 \rangle\subset\langle e_1, e_2 \rangle\subset \dots \subset \langle e_1, e_2, ..., e_n\rangle\). This means we can write it as \(sl_n/B\) for some group \(B\) that stabilisies the canonical flag. That we can just rip from our explicit computation, we're looking for matrices that stabilise subspaces at every level, hense we take the intersection of all \(B_\ell\) which is just the upper triangular matrices. As it turns out this is a very important kind of subgroup called a Borel subgroup and (considering \(sl_n\) with Zariski topology as algebraic group) the (up to conjugacy) maximal subgroup that is closed, connected and soluable. This motivates for a general algebraic group \(G\) the definition \(F(G)=G/B\) for \(B\) the Borel subgroup. This object has many nice properties, for exaple if we have \(G\) is say, a semisimple algebraic group, then the variety \(\operatorname{Nilp(\mathfrak{g})} \subset \mathfrak{g}\) of ad-nilpotent objects is singular but using the flag variety we have  resolution \(\Omega (G/B) \to \operatorname{Nilp}(\mathfrak{g})\) where \(\Omega(G/B)\) is the cotangent bundle so smooth giving a resolution. Morally this holds because for an algebraic/lie group we can mostly work over the identity so as \(\Omega_e(G/B)=\mathfrak{g}/\mathfrak{b}^\vee = \mathfrak{b}^\bot\), that is those linear maps that kill \(\mathfrak{b}\), using the non degenerate killing form on \(\mathfrak{g}\) this is those things orthogonal to \(\mathfrak{b}\) which is well known to be the nilradial of \(\mathfrak{b}\). This means that, at least at the identity, the cotangents are precicely the nilpotents contained in our chosen Borel. This lets us see that when we take an arbitrary Borel coset and pull it back to the identity the cotangents are those nilpotents contained in the adjoint image of \(\mathfrak{b}\), this gives an identification \(\Omega(G/B) \leftrightarrow \{(x,\mathfrak{b}) \vert x \text{ nilpotent }, x \in \mathfrak{b})\}\) and hense a projection map \(\Omega(G/B) \to \operatorname{Nilp}(\mathfrak{g})\). This is interesting to geometers already and interesting to representation theorists as the cohomology of \(\Omega(G/B) \times_{\operatorname{Nilp}(\mathfrak{g})} \Omega(G/B)\) acts on the cohomology of the fibres by convolution (at the level of sheaves this looks like matrix multiplication) and in fact the cohomology is just the group algebra of the Weyl group and even better the cohomology of the fiber over \(x\) decomposes into \(\operatorname{Stab}_G(x)/\operatorname{Stab}_G(x)_o\) isotypic subspaces which are a complete set of irreducible representations of the Weyl group! <br>
+Here I must confess I am sad, as flag varieties \(\mathbb{P}^1\) corresponds to \(sl_2\) which is the semisimple lie algebra corresponding to \(A_1\). This is sad because dynkin diagrams are quivers and the Kronecker quiver looks like the \(B_2\) or maybe \(A_2\) diagram. The main issue here is that \(A_1\) is so simple that there's no real way to redraw it that the representations can be anything but \(k-\mathbf{Vect}\) which will clearly be distinct from anything associated to \(\bullet \rightrightarrows \bullet\). An interesting question is let \(F\) be the flag variety of a seimisimple lie/algebraic group \(G\) with corresponding dynkin diagram \(D\), is there a combinatorial way to find a quiver with relations \(\mathbf{Q}\) so that \(\mathcal{D}(\mathbf{Q})\) is equivalent to \mathcal{D}(F). Ie this map should send \([\bullet] \mapsto [\bullet \rightrightarrows \bullet]\). My guess is there's no such thing since we only obtain the quiver up to derived morita equivalence and in general there is no canonical choice, for example on \(\mathbb{P}^2\) if we choose \(\langle \mathcal{O}, \Omega(2), \mathcal{O}(1) \rangle\) we get quiver
+<br>
+<div style="text-align: center;"><img src="diagram.svg" /></div>
+<br>
+With relations \(\{f_i g_j + f_j g_i\}\), wheras if we take \(\langle \mathcal{O}(-2), \mathcal{O}(-1), \mathcal{O} \rangle\) we get the same diagram but with relations \(\{f_i g_j - f_j g_i\}\) so we cannot hope to obtain a canonical quiver with relations given a projective variety
+<br>
+<a href="https://math.ucr.edu/home/baez/week180.html">John Baez</a> describes a fundamental property of the dynkin diagram, where you can use it to read off maximal parbolics of your algebraic group as well as using it to read off the irreducible representations. This seems arguably nicer than what we get with the Kronecker quiver since it lets us read off what? Homologically projective complexes?
 </body>
 </html>
