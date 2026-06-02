@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+   <div class="page">
+<div class = "content">
+  ** (∞,1)-SHOPPING **<br>
+    ---------------------------<br>** 
+  CATEGORIES **<br>
+  ---------------------------<br>
+  <div class = "items">
+    Δ: the simplex category<br>
+    sSet: the category of simplicial sets, presheaves on Δ<br>
+    CATΔ: the category of simplicial categories<br>
+    KAN: the simplicial category of kan complexes, ie all horns have fills<br>
+    MAP(a,b): the kan complex of maps a->b<br>
+    Fun(X,Y): the ∞category of functors X->Y<br>
+    (C)~: The core of C, the subcategory of C spanned by h(C)~, the full subcategory whos morphisms are isomorphisms. The maximal ∞gpd in C
+    qCAT: the simplicial category of infinity categories<br>
+    ∞CAT: the category of infinity categories, ie inner horns have fills, the homotopy coherent nerve of qCAT<br>
+    ∞GPD: the category of infinity groupoids<br>
+    SPC: the homotopy coherent nerve of KAN<br>
+    PrL: The category of presentable ∞categories, morphisms are left adjoints<br>
+    PrR: The category of presentable ∞categories, morphisms are right adjoints<br>
+    PrL=PrR(op)<br>
+    Sp(C): The stabilisation of C (pointed), formally inverting the loop functor<br>
+    Sp: Sp(SPC), the category of spectra<br>
+    TW(C): TW(C)n=hom(Δn★Δn(op), C), the twisted arrow category
+    </div>
+  ---------------------------<br>** 
+  FUNCTORS **<br>
+  ---------------------------<br>
+  <div class = "items">
+  N: 1CAT->∞CAT(->sSet)<br>
+  sends a category to its nerve, simplices are compositions<br>
+ h: sSet->1CAT<br>
+   takes morphisms up to homotopy<br>h ⊣ N
+    <br>
+    
+ |•|:sSet->Top<br>
+    realises the simplices as spaces and glues with maps<br>
+    Sing: Top -> sSet<br>
+    the singular simplicial set of a space<br>
+     |•| ⊣ Sing
+    <br>
+    ℭ: sSet -> CATΔ<br>
+    objects at Δn are 1...n, the Δhom of i,j is the nerve of the poset of subsets of {i...j}, extend by colimits<br>
+    NΔ: CATΔ->sSet<br>
+    NΔ(S)(n)=homΔ(ℭ(Δn),S), the homotopy coherent nerve<br>
+    ℭ ⊣ NΔ<br>
+    hom(-,-): sSetxsSet(op)->sSet<br>
+    hom(A,B)(n)=hom(AxΔn,B), the internal hom<br>
+    Ax(-) ⊣ hom(A,-)<br>
+    πi:sSet(*) -> Set(Grp)
+<br>
+    The ith fundamental group / at 0 just the connected components<br>
+    (-)★(-): sSetxsSet->sSet <br>
+    A★B(n) is the union over all A({0...i})xB({i+1...n})
+  <div>
+</div>
+</div>
+  </body>
+</html>
