@@ -1,0 +1,20 @@
+.page{
+  margin-left: 30%;
+  width: 40%;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) ;
+}
+
+.content {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
+
+.items {
+  margin-left: 70px;
+  margin-right: 60px;
+  text-align: left;
+  font-size: 10px
+}
