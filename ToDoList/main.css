@@ -6,3 +6,7 @@ summary {
   margin-left: -2em;
 }
 
+p {
+  color: #00fa2a;
+  text-shadow: 1px 0 2px #1fb91c;
+}
